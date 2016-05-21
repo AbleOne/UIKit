@@ -1,4 +1,5 @@
 node_modules
 .tmp
-bower_components
+/bower_components
 test
+/\!!!TODO.txt
