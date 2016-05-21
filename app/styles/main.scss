@@ -1,0 +1,77 @@
+
+// VARIABLES (RE)DEFINITION
+  @import "variables";
+
+// ICONS FONTS: 
+  // 1.1) GLYPHICONS (BOOTSTRAP)
+    $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+  // 1.2) FONT AWESOME 
+    $fa-font-path: "../bower_components/font-awesome/fonts";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower
+
+// custom: scss
+@import "bootswatch";
+
+// overall
+  @-webkit-viewport{width:device-width}
+  @-moz-viewport{width:device-width}
+  @-ms-viewport{width:device-width}
+  @-o-viewport{width:device-width}
+  @viewport{width:device-width}
+
+  .browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+
+  body {
+    padding-top: 50px;
+  }
+
+// BS Showcase
+  .mt-30 {
+    margin-top: 30px;
+  }
+  .bs-sizing-example {
+    .btn-group {
+      margin-right: 20px;
+    }
+  }
+
+  h1 {
+    margin-top: 0;
+    padding-top: 83px;
+  }
+
+
+// Status
+  .status {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+
+    &.bg-success,
+    &.bg-active {
+      background: $brand-success;
+    }
+
+    &.bg-warning {
+      background: $brand-warning;
+    }
+
+    &.bg-danger {
+      background: $brand-danger;
+    }
+
+    &.bg-inactive {
+      background: $gray-light;
+    }
+  }

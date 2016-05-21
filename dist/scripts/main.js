@@ -1,0 +1,1 @@
+console.log("LucidWorks rocks!"),$(document).ready(function(){$('.bs-component [data-toggle="popover"]').popover(),$('.bs-component [data-toggle="tooltip"]').tooltip();moment().calendar();$("#datetimepicker").datetimepicker({defaultDate:"now"})});
