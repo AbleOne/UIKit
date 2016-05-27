@@ -28,9 +28,12 @@ $(document).ready(function() {
 
   // DatePicker
   var now = moment().calendar();
-  $('#datetimepicker').datetimepicker({
+  $('.datepicker').datetimepicker({
   	 defaultDate: 'now'
   });
+
+  // Autosize
+  autosize($('textarea'));
 
   });
 // /.document.ready()

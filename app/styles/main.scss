@@ -34,7 +34,12 @@
     padding-top: 50px;
   }
 
-// BS Showcase
+  p {
+    line-height: 1.5;
+  }
+
+
+  // BS Showcase
   .mt-30 {
     margin-top: 30px;
   }
@@ -73,5 +78,101 @@
 
     &.bg-inactive {
       background: $gray-light;
+    }
+  }
+
+// Tools
+  .inline-icons .fa {
+    margin: 0 6px;
+  }
+
+
+
+  // Compl table
+  .lead-btn {
+    margin-bottom: 20px;
+  }
+
+  .list-group-item[data-toggle="collapse"] + div {
+    position: relative;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+
+    ul {
+      margin: 10px 15px;
+    }
+  }
+
+  .btn-group.checkbox-inside {
+    margin-left: 8px;
+
+    .btn {
+      box-shadow: none;
+      background: #efefef;
+
+      &:first-child {
+        padding-right: 0;
+      }
+
+      .checkbox {
+        margin: 0;
+      }
+    }
+  }
+
+  .checkbox-inside-hint {
+    margin-left: 7px;
+  }
+
+  .table {
+    margin-top: 23px;
+
+    // table head
+    > thead > tr > th {
+      vertical-align: middle;
+
+      .fa.pull-right {
+        margin-top: 5px;
+      }
+    }
+
+    // table body
+    td {
+      // checks
+      .checkbox {
+        margin: 0 0 0 20px;
+        min-width: 42px;
+      }
+      
+      // typography
+      h2 {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 6px;
+
+        > span {
+          margin-right: 10px;
+        }
+
+        & + .lead {
+          font-size: 15px;
+          line-height: 1.3;
+        }
+      }
+
+      // btn bottom
+      &.btn-bottom-holder{
+        position: relative;
+        padding-bottom: 56px;
+
+        > .btn,
+        > .btn-group {
+          position: absolute;
+          left: 0;
+          bottom: 16px;
+          margin-left: 8px;
+        }
+      }
     }
   }

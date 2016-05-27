@@ -5,7 +5,8 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.3",
     "font-awesome": "^4.6.3",
-    "eonasdan-bootstrap-datetimepicker": "^4.17.37"
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "autosize": "^3.0.15"
   },
   "overrides": {
     "bootstrap-sass": {
