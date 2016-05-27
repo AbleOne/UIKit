@@ -119,198 +119,390 @@
 
          <!-- MAIN -->
          <div class="col-sm-10">
-            <div class="btn-group checkbox-inside">
-               <div class="btn">
-                  <div class="checkbox">
-                     <label><input type="checkbox"></label>
-                  </div>
-               </div>
-               <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
-                  <span class="caret"></span>
-               </a>
-               <ul class="dropdown-menu">
-                  <li>
-                     <a href="#">All</a>
-                  </li>
-                  <li>
-                     <a href="#">None</a>
-                  </li>
-                  <li>
-                     <a href="#">Other states</a>
-                  </li>
-               </ul>
-            </div>
-            <span class="small text-muted checkbox-inside-hint">2 rules selected</span>
-            <div class="btn-group">
-               <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                  <i class="fa fa-clone"></i>
-                  Bulk actions
-                  <span class="caret"></span>
-               </a>
-               <ul class="dropdown-menu">
-                  <li>
-                     <a href="#">Dropdown link</a>
-                  </li>
-                  <li>
-                     <a href="#">Dropdown link</a>
-                  </li>
-                  <li>
-                     <a href="#">Dropdown link</a>
-                  </li>
-               </ul>
-            </div>
-
-            <table class="table table-hover ">
-               <thead>
-                  <tr>
-                     <th>
-                        
-                     </th>
-                     <th>Status</th>
-                     <th>Name <i class="fa fa-filter"></i><i class="fa fa-sort pull-right"></i></th>
-                     <th>Trigger</th>
-                     <th>Action</th>
-                     <th>Created on<i class="fa fa-sort pull-right"></i></th>
-                     <th>Edited on<i class="fa fa-sort pull-right"></i></th>
-                     <th></th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td>
+            <div class="row">
+               <div class="col-sm-6">
+                  <div class="btn-group checkbox-inside">
+                     <div class="btn">
                         <div class="checkbox">
                            <label><input type="checkbox"></label>
                         </div>
+                     </div>
+                     <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li>
+                           <a href="#">All</a>
+                        </li>
+                        <li>
+                           <a href="#">None</a>
+                        </li>
+                        <li>
+                           <a href="#">Other states</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <span class="small text-muted checkbox-inside-hint">2 rules selected</span>
+                  <div class="btn-group">
+                     <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i>
+                        Bulk actions
+                        <span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li>
+                           <a href="#">Dropdown link</a>
+                        </li>
+                        <li>
+                           <a href="#">Dropdown link</a>
+                        </li>
+                        <li>
+                           <a href="#">Dropdown link</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-sm-6 text-right">
+                  <div class="btn-group">
+                     <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-filter"></i>
+                        Filter
+                        <span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu">
+                        <li>
+                           <a href="#">Dropdown link</a>
+                        </li>
+                        <li>
+                           <a href="#">Dropdown link</a>
+                        </li>
+                        <li>
+                           <a href="#">Dropdown link</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <form class="form-inline" role="search">
+                     <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            
+            <!-- TABLE -->
+            <table class="table table-hover rules-list">
+               <!-- THEAD -->
+               <thead>
+                  <tr>
+                     <th></th>
+                     <th><!-- Status --></th>
+                     <th width="20%"><div class="column-header-holder"><span>Name <i class="fa fa-filter"></i></span><i class="fa fa-sort"></i></div></th>
+                     <th width="38%">Trigger</th>
+                     <th width="20%">Action</th>
+                     <th><div class="column-header-holder">Created on<i class="fa fa-sort pull-right"></i></div></th>
+                     <th><div class="column-header-holder">Edited on<i class="fa fa-sort pull-right"></i></div></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <!-- TBODY -->
+               <tbody>
+                  <tr class="">
+                     <td>
+                        <div class="column-holder">
+                           <div class="checkbox">
+                              <label><input type="checkbox"></label>
+                           </div>
+                        </div>
                      </td>
                      <td class="text-center">
-                        <a href="#" class="status bg-active"></a>
+                        <div class="column-holder">
+                           <a href="#" class="status bg-active"></a>
+                        </div>
                      </td>
                      <td>
-                        <h2><span>#1</span>Rule name</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet<!-- , elit tila consectetur adipisicing elit mora ipsum lorem dolor sit amet, conse ctetur adipisicing elit. Voluptatibus delectus ab ipsum. --></p>
-                     </td>
-                     <td class="btn-bottom-holder">
-                        <div class="row">
-                           <!-- Trigger Types -->
-                           <div class="col-xs-7">
-                              <form action="">
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label for="triggerKeywords" class="small text-muted text-uppercase">Keywords</label>
-                                       <textarea class="form-control" id="triggerKeywords">Rule, keywords, comma, delimiter, keywords, rule, delimiter, comma, some, other, keywords</textarea>
-                                    </div>
-                                    <div class="form-group">
-                                       <label for="triggerCategory" class="small text-muted text-uppercase">Category</label>
-                                       <select class="form-control" id="triggerCategory">
-                                             <option value="1">Category #1</option>
-                                             <option value="2">Category #2</option>
-                                             <option value="3">Category #3</option>
-                                             <option value="4">Category #4</option>
-                                       </select>
-                                    </div>
-                                 </fieldset>
-                              </form>
-                           </div>
-                           <!-- Trigger Date and Time -->
-                           <div class="col-xs-5">
-                              <form action="">
-                                 <fieldset>
-                                    <div class="form-group">
-                                       <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
-                                       <div class="datepicker-holder">
-                                          <input type='text' class="form-control datepicker" id="triggerEnd" /> 
-                                       </div>
-                                    </div>
-                                    <div class="form-group">
-                                       <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
-                                       <div class="datepicker-holder">
-                                          <input type='text' class="form-control datepicker" id="triggerStart" /> 
-                                       </div>
-                                    </div>
-                                 </fieldset>
-                              </form>
-                           </div>
-                        </div>
-                        <div class="btn-group btn-group-sm">
-                           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                              <i class="fa fa-plus"></i>
-                              add trigger
-                              <span class="caret"></span>
-                           </a>
-                           <ul class="dropdown-menu">
-                              <li>
-                                 <a href="#">Dropdown link</a>
-                              </li>
-                              <li>
-                                 <a href="#">Dropdown link</a>
-                              </li>
-                              <li>
-                                 <a href="#">Dropdown link</a>
-                              </li>
-                           </ul>
+                        <div class="column-holder">
+                           <h2><span>#1</span>Rule name</h2>
+                           <p class="lead">Lorem ipsum dolor sit amet, elit tila consectetur adipisicing elit mora ipsum lorem dolor sit amet, conse ctetur adipisicing elit. Voluptatibus delectus ab ipsum.</p>
                         </div>
                      </td>
                      <td class="btn-bottom-holder">
-                        <form action="">
+                        <div class="column-holder">
+                           <div class="row hor-gut-6px">
+                              <!-- Trigger Types -->
+                              <div class="col-xs-6">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerKeywords" class="small text-muted text-uppercase">Keywords</label>
+                                          <textarea rows="1" class="form-control" id="triggerKeywords">Rule, keywords, comma, delimiter, keywords, rule, delimiter</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="triggerCategory" class="small text-muted text-uppercase">Category</label>
+                                          <select class="form-control" id="triggerCategory">
+                                                <option value="1">Category #1</option>
+                                                <option value="2">Category #2</option>
+                                                <option value="3">Category #3</option>
+                                                <option value="4">Category #4</option>
+                                          </select>
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                              <!-- Trigger Date and Time -->
+                              <div class="col-xs-6">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerStart" /> 
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerEnd" /> 
+                                          </div>
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 add trigger
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <form action="">
+                              <div class="form-group">
+                                 <label for="actionRedirect" class="small text-muted text-uppercase">Redirect</label>
+                                 <input type='text' class="form-control" id="actionRedirect" value="/screens/touch-technology" /> 
+                              </div>
+                           </form>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 add action
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
                            <div class="form-group">
-                              <label for="actionRedirect" class="small text-muted text-uppercase">Redirect</label>
-                              <input type='text' class="form-control" id="actionRedirect" value="/screens/touch-technology" /> 
+                              <label for="rule-1-created-date" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-created-date" value="05/27/2016" disabled /> 
+                              </div>
                            </div>
-                        </form>
-                        <div class="btn-group btn-group-sm">
-                           <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                              <i class="fa fa-plus"></i>
-                              add action
-                              <span class="caret"></span>
-                           </a>
-                           <ul class="dropdown-menu">
-                              <li>
-                                 <a href="#">Dropdown link</a>
-                              </li>
-                              <li>
-                                 <a href="#">Dropdown link</a>
-                              </li>
-                              <li>
-                                 <a href="#">Dropdown link</a>
-                              </li>
-                           </ul>
-                        </div>
-                     </td>
-                     <td>
-                        <div class="form-group">
-                           <label for="rule-1-created-date" class="small text-muted text-uppercase">Date</label>
-                           <div class="datepicker-holder">
-                              <input type='text' class="form-control" id="rule-1-created-date" value="05/27/2016" disabled /> 
-                           </div>
-                        </div>
-                        <div class="form-group">
-                           <label for="rule-1-created-Time" class="small text-muted text-uppercase">Time</label>
-                           <div class="datepicker-holder">
-                              <input type='text' class="form-control" id="rule-1-created-Time" value="12:00 AM" disabled /> 
+                           <div class="form-group">
+                              <label for="rule-1-created-Time" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-created-Time" value="12:00 AM" disabled /> 
+                              </div>
                            </div>
                         </div>
                      </td>
                      <td>
-                        <div class="form-group">
-                           <label for="rule-1-edited-date" class="small text-muted text-uppercase">Date</label>
-                           <div class="datepicker-holder">
-                              <input type='text' class="form-control" id="rule-1-edited-date" value="05/27/2016" disabled /> 
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-1-edited-date" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-edited-date" value="05/27/2016" disabled /> 
+                              </div>
                            </div>
-                        </div>
-                        <div class="form-group">
-                           <label for="rule-1-edited-Time" class="small text-muted text-uppercase">Time</label>
-                           <div class="datepicker-holder">
-                              <input type='text' class="form-control" id="rule-1-edited-Time" value="12:22 AM" disabled /> 
+                           <div class="form-group">
+                              <label for="rule-1-edited-Time" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-edited-Time" value="12:22 AM" disabled /> 
+                              </div>
                            </div>
                         </div>
                      </td>
                      <td class="text-nowrap inline-icons"> 
-                        <a class="text-muted" href="#"><i class="fa fa-pencil"></i></a>
-                        <a class="text-muted" href="#"><i class="fa fa-times"></i></a>
+                        <div class="column-holder">
+                           <a class="text-muted" href="#"><i class="fa fa-pencil"></i></a>
+                           <a class="text-muted" href="#"><i class="fa fa-times"></i></a>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="inactive">
+                     <td>
+                        <div class="column-holder">
+                           <div class="checkbox">
+                              <label><input type="checkbox"></label>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="text-center">
+                        <div class="column-holder">
+                           <a href="#" class="status bg-inactive"></a>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <h2><span>#2</span>Rule name</h2>
+                           <p class="lead">Lorem ipsum dolor sit amet, elit tila consectetur</p>
+                        </div>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <div class="row hor-gut-6px">
+                              <!-- Trigger Types -->
+                              <div class="col-xs-6">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerKeywords" class="small text-muted text-uppercase">Keywords</label>
+                                          <input type="text" class="form-control" id="triggerTags1" aria-describedby="triggerTags"  placeholder='Enter tags' value="tag#1, tag_long#2, tags#3">
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                              <!-- Trigger Date and Time -->
+                              <div class="col-xs-6">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerStart" /> 
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerEnd" /> 
+                                          </div>
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 add trigger
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <form action="">
+                              <div class="form-group">
+                                 <label for="actionProductList" class="small text-muted text-uppercase">Product List</label>
+                                 <textarea rows="1" class="form-control" id="actionProductList">ident#1, id_item#2, id#3, id_item#4</textarea>
+                                 <a href="#" class="btn btn-link btn-sm btn-file">
+                                    <i class="fa fa-file-text"></i>
+                                    Upload file
+                                 </a>
+                              </div>
+                           </form>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 add action
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-1-created-date" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-created-date" value="05/27/2016" disabled /> 
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="rule-1-created-Time" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-created-Time" value="12:00 AM" disabled /> 
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-1-edited-date" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-edited-date" value="05/27/2016" disabled /> 
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="rule-1-edited-Time" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-1-edited-Time" value="12:22 AM" disabled /> 
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="text-nowrap inline-icons"> 
+                        <div class="column-holder">
+                           <a class="text-muted" href="#"><i class="fa fa-pencil"></i></a>
+                           <a class="text-muted" href="#"><i class="fa fa-times"></i></a>
+                        </div>
                      </td>
                   </tr>
                </tbody>
             </table>
+            <hr />
          </div>
       </div>
 

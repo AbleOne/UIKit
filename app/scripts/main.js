@@ -35,5 +35,14 @@ $(document).ready(function() {
   // Autosize
   autosize($('textarea'));
 
+  // Tags 
+  $('[id^="triggerTags"]').tagsinput({
+    tagClass: 'label label-default'
   });
+
+  $('.rules-list h2').on('click', function() {
+    $(this).closest('tr').toggleClass('inactive');
+  });
+
+});
 // /.document.ready()
