@@ -72,6 +72,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     // border: none;
     // @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
     @include transition(all 0.4s);
+    
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      box-shadow: none;
+      outline: 0 !important;
+    }
 
     &-default {
       border-color: #efefef;
@@ -176,6 +184,25 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
 // Forms ======================================================================
 
+  .complex-input {
+    position: relative;
+    
+    .input-addon {
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+    
+
+    &.complex-input-lg {
+      .input-addon,
+      .form-control,
+      input[type="text"] {
+        font-size: 18px;
+      }
+    }
+  }
+
   label {
     font-weight: normal;
   }
@@ -185,9 +212,18 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     line-height: 1.4 !important;
   }
 
-  tr.inactive .form-control {
+  tr.inactive .form-control,
+  tr.inactive textarea {
     box-shadow: none;
     border-color: transparent !important;
+  }
+
+  textarea:focus {
+    outline: 0 !important;
+  }
+
+  tr.inactive textarea.lead {
+    height: 50px !important;
   }
 
   textarea,

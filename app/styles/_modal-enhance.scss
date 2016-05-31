@@ -1,0 +1,45 @@
+/* MODAL ENHANCE */    
+    
+    // MODAL
+        .modal {
+            text-align: center;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+
+        .modal:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -9px;
+        }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+            
+            left: auto !important;
+            right: auto !important;
+            top: auto !important;
+            bottom: auto !important;
+            padding: 0 !important;
+
+            @media screen and (max-width: $screen-sm) {
+                margin-right: 5px !important;
+            }
+        }
+
+
+    .add-rule {
+        ol li {
+            width: 32%;
+            display: inline-block;
+            margin: 0;
+            margin-left: -4px;
+            vertical-align: top;
+            padding-right: 10%;
+            padding-left: 0;
+        }
+    }

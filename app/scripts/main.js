@@ -5,15 +5,33 @@ console.log('LucidWorks rocks!');
 // CONTENT ///////////////////////////////////////////
 //
 // 0) functions
-//		0.1) PAUSE StickyFill (https://github.com/wilddeer/stickyfill)
-//		0.2) FULLHEIGHT CARD
-//		0.3) UNIVERSAL STATE EL `TOGGLER`
 //
 // 1) document.ready
 //
 //----------------------------------------------------
 
 // 0) functions	
+// MODAL IMPROVE
+  function setModalMaxHeight(element) {
+    var $element = $(element),
+      $content = $element.find('.modal-content');
+    var borderWidth = $content.outerHeight() - $content.innerHeight();
+    var dialogMargin = $(window).width() < 768 ? 20 : 60;
+    var contentHeight = $(window).height() - (dialogMargin + borderWidth);
+    var headerHeight = $element.find('.modal-header').outerHeight() || 0;
+    var footerHeight = $element.find('.modal-footer').outerHeight() || 0;
+    var maxHeight = contentHeight - (headerHeight + footerHeight);
+
+    $content.css({
+      'overflow': 'hidden'
+    });
+
+    $element
+      .find('.modal-body').css({
+        'max-height': maxHeight,
+        'overflow-y': 'auto'
+      });
+  }
 //	/.functions
 
 
@@ -40,6 +58,7 @@ $(document).ready(function() {
     tagClass: 'label label-default'
   });
 
+  // Row expand
   $('.rules-list .column-more').on('click', function() {
     var thisTR = $(this).closest('tr');
     if (thisTR.hasClass('inactive')) {
@@ -47,6 +66,7 @@ $(document).ready(function() {
     }
   });
 
+  // Row collapse
   $('.rules-list .btn-save').on('click', function() {
     var thisTR = $(this).closest('tr');
     if (!thisTR.hasClass('inactive')) {
@@ -55,6 +75,19 @@ $(document).ready(function() {
       thisTR.addClass('inactive');
     }
   });
+
+  // MODAL IMPROVE
+  $('.modal').on('show.bs.modal', function() {
+    $(this).show();
+    setModalMaxHeight(this);
+  });
+
+  $(window).resize(function() {
+    if ($('.modal.in').length != 0) {
+      setModalMaxHeight($('.modal.in'));
+    }
+  });
+
 
 });
 // /.document.ready()
