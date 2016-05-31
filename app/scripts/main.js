@@ -29,7 +29,7 @@ $(document).ready(function() {
   // DatePicker
   var now = moment().calendar();
   $('.datepicker').datetimepicker({
-  	 defaultDate: 'now'
+    defaultDate: 'now'
   });
 
   // Autosize
@@ -40,8 +40,20 @@ $(document).ready(function() {
     tagClass: 'label label-default'
   });
 
-  $('.rules-list h2').on('click', function() {
-    $(this).closest('tr').toggleClass('inactive');
+  $('.rules-list .column-more').on('click', function() {
+    var thisTR = $(this).closest('tr');
+    if (thisTR.hasClass('inactive')) {
+      thisTR.removeClass('inactive');
+    }
+  });
+
+  $('.rules-list .btn-save').on('click', function() {
+    var thisTR = $(this).closest('tr');
+    if (!thisTR.hasClass('inactive')) {
+      // ... save changes
+      // ... and
+      thisTR.addClass('inactive');
+    }
   });
 
 });

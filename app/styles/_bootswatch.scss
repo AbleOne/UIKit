@@ -38,6 +38,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     .btn-#{$class} {
       background-size: 200%;
       background-position: 50%;
+      border-color: darken($bg, 5%);
 
       &:focus {
         background-color: $bg;
@@ -52,7 +53,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         background-color: darken($bg, 12%);
         @include gradient-radial(darken($bg, 12%) 10%, $bg 11%);
         background-size: 1000%;
-        @include box-shadow(2px 2px 4px rgba(0,0,0,.4));
+        // @include box-shadow(2px 2px 4px rgba(0,0,0,.4)); 
       }
     }
   }
@@ -66,15 +67,22 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   @include btn(link,#fff);
 
   .btn {
-    text-transform: uppercase;
-    border: none;
-    @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
+    // text-transform: uppercase;
+    border-radius: 0;
+    // border: none;
+    // @include box-shadow(1px 1px 4px rgba(0,0,0,.4));
     @include transition(all 0.4s);
 
+    &-default {
+      border-color: #efefef;
+      color: #777;
+    }
+
     &-link {
-      border-radius: $btn-border-radius-base;
+      // border-radius: $btn-border-radius-base;
       @include box-shadow(none);
-      color: $btn-default-color;
+      color: #777; //$btn-default-color;
+      border-color: transparent;
 
       &:hover,
       &:focus {
@@ -100,8 +108,21 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     > .caret {
       margin-top: -3px;
       margin-left: 5px;
-      border-top-color: $gray !important;
+      border-top-color: #bbb !important; //$gray
     }
+  }
+
+  .btn-group.open .dropdown-toggle {
+    box-shadow: none;
+  }
+
+  .btn-sm, .btn-group-sm > .btn {
+    border-radius: 0;
+  }
+
+
+  .btn-group-lg .btn-link .caret {
+    border-width: 4px 4px 0;
   }
 
   .btn-group {
@@ -160,8 +181,13 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 
   .form-control {
-    height: 30px;
+    height: 20px;
     line-height: 1.4 !important;
+  }
+
+  tr.inactive .form-control {
+    box-shadow: none;
+    border-color: transparent !important;
   }
 
   textarea,
@@ -181,7 +207,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     border-radius: 0;
     -webkit-appearance: none;
     @include box-shadow(inset 0 -1px 0 #ddd);
-    font-size: 13px;
+    font-size: 12px;
 
     &:focus {
       @include box-shadow(inset 0 -2px 0 $brand-primary);
@@ -190,7 +216,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     &[disabled],
     &[readonly] {
       @include box-shadow(none);
-      border-bottom: 1px dotted #ddd;
+      border-bottom: 1px dotted transparent; // #ddd;
       color: #cecece;
       cursor: text !important;
     }
@@ -217,9 +243,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
   textarea,
   textarea.form-control {
-    padding: 6px 0; //3px 0
+    padding: 2px 0; //3px 0
     resize:none;
     line-height: 1.6; //$line-height-small;
+  }
+
+  tr.inactive textarea {
+    height: 20px !important;
+    overflow: hidden !important;
   }
 
   select,
@@ -238,7 +269,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     background-repeat: no-repeat;
     background-position: right center;
     @include box-shadow(inset 0 -1px 0 #ddd);
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5;
 
     &::-ms-expand {
@@ -464,7 +495,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   // TAGS
   .bootstrap-tagsinput {
     width: 100%;
-    padding: 4px 0;
+    padding: 2px 0 4px;
     background: transparent;
     border: none;
     border-radius: 0;
@@ -487,7 +518,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     input[type="text"] {
       width: auto; //100%; //75px; //auto;
       height: 18px;
-      font-size: 13px;
+      font-size: 12px;
       padding: 0;
       border: none;
       border-radius: 0;
@@ -523,8 +554,21 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     .tag {
       font-weight: normal;
       font-size: 11px;
+
+      border-radius: 10px;
+      background: #eee;
+      color: #777;
+      padding-top: 3px;
     }
   }
+
+  tr.inactive .bootstrap-tagsinput {
+    box-shadow: none;
+    border-color: transparent !important;
+    height: 23px;
+    overflow: hidden;
+  }
+
 
   // FILE UPLOAD
   .btn-file {
