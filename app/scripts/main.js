@@ -47,7 +47,9 @@ $(document).ready(function() {
   // DatePicker
   var now = moment().calendar();
   $('.datepicker').datetimepicker({
-    defaultDate: 'now'
+    defaultDate: 'now' //,
+    // collapse: false
+    // debug: true
   });
 
   // Autosize
@@ -80,6 +82,10 @@ $(document).ready(function() {
   $('.modal').on('show.bs.modal', function() {
     $(this).show();
     setModalMaxHeight(this);
+  });
+  
+  $('.modal').on('shown.bs.modal', function() {
+    autosize.update($('textarea'));
   });
 
   $(window).resize(function() {

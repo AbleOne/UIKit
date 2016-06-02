@@ -15,6 +15,8 @@
             margin-right: -9px;
         }
 
+
+
         .modal-dialog {
             display: inline-block;
             text-align: left;
@@ -31,15 +33,109 @@
             }
         }
 
+    // MODAL RWD
+    @media screen and (min-width: 992px) {
+        .modal-lg {
+            width: 90%;
+            max-width: 1200px;
+        }
+    }
+        
 
     .add-rule {
-        ol li {
-            width: 32%;
-            display: inline-block;
-            margin: 0;
-            margin-left: -4px;
-            vertical-align: top;
-            padding-right: 10%;
-            padding-left: 0;
+        .modal-content {
+            box-shadow: 0 8px 22px 0 rgba(0,0,0,0.05),0 10px 60px 0 rgba(0,0,0,0.15);
         }
+
+        .modal-body {
+            min-height: 455px;
+        }
+
+        .modal-footer {
+            padding-top: 0;
+
+            > hr {
+                margin-bottom: 30px;
+                border-top-style: dashed;
+                border-top-color: #ddd;
+            }
+        }
+
+        label {
+            display: block;
+            margin-bottom: -6px;
+        }
+
+        ol {
+            margin-top: 20px;
+            counter-reset: term;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 110px;
+                bottom: 0;
+
+                border-width: 0 0 0 1px;
+                border-style: dashed;
+                border-color: #ddd; //$gray-lighter;    
+            }
+
+            &:before {
+                left: 35%;
+                margin-left: 30px;
+            }
+
+            &:after {
+                right: 30%;
+                margin-right: 34px;
+            }
+
+            > li {
+                
+                &:before {
+                    counter-increment: term;
+                    content: counter(term);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    border: 1px solid #BBBBBB;
+                    color: #bbb;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 38px;
+                    font-size: 18px;
+                    text-align: center;
+                    border-radius: 50%;
+                }
+
+                position: relative;
+                width: 30%;
+                display: inline-block;
+                margin: 0;
+                margin-left: -4px;
+                margin-right: 2%;
+                vertical-align: top;
+                padding-left: 60px;
+
+                &:first-child {
+                    margin-left: 3%;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+
+                h4 {
+                    color: #757575;
+                    margin-top: 9px;
+                    margin-bottom: 35px;
+                }
+            }
+        }
+
+
     }

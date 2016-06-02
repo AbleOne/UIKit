@@ -98,6 +98,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         color: $btn-default-color;
         text-decoration: none;
       }
+
+      &.text-muted {
+        color: $gray-light;
+
+        &:hover,
+        &:focus {
+          color: $btn-default-color;
+        }
+      }
     }
 
     &-default {
@@ -282,6 +291,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     padding: 2px 0; //3px 0
     resize:none;
     line-height: 1.6; //$line-height-small;
+    max-height: 300px;
   }
 
   tr.inactive textarea {
@@ -610,6 +620,7 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   .btn-file {
     margin-top: 10px;
   }
+
 
 // Navs =======================================================================
 

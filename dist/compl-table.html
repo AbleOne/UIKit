@@ -198,7 +198,7 @@
                      <th></th>
                      <th>Status</th>
                      <th width="20%"><div class="column-header-holder"><span>Name <a href="#" class="text-muted"><i class="mi-filter_list"></i></a></span><a href="#" class="text-muted"><i class="fa fa-sort"></i></a></div></th>
-                     <th width="40%">Trigger</th>
+                     <th width="41%">Trigger</th>
                      <th width="18%">Action</th>
                      <th><div class="column-header-holder">Created on<a href="#" class="text-muted"><i class="fa fa-sort"></i></a></div></th>
                      <th><div class="column-header-holder">Edited on<a href="#" class="text-muted"><i class="fa fa-sort"></i></a></div></th>
@@ -526,7 +526,7 @@
          </div>
       </div>
 
-      <div id="addRule" class="modal fade add-rule">
+      <div id="addRule" data-show="true" class="modal fade add-rule">
          <div class="modal-dialog modal-lg">
             <div class="modal-content">
                <!-- <div class="modal-header">
@@ -534,39 +534,110 @@
                </div> -->
                <div class="modal-body">
                   <!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
-                  <ol class="">
-                     <li>sdddddddd
-                     </li>
-                  </ol>
-                  <ol class="list-inline">
-                     <li>
-                        <h4>Rule name</h4>
-                        <div class="wiz-step">
-                           <form action="">
-                              <fieldset>
+                  <div class="add-rule-wiz">
+                     <ol class="list-inline">
+                        <li>
+                           <h4>Rule name</h4>
+                           <div class="wiz-step">
+                              <form action="">
+                                 <fieldset>
+                                    <div class="form-group">
+                                       <label for="addRuleName" class="small text-muted text-uppercase">Rule name</label>
+                                       <input type='text' class="form-control" id="addRuleName" placeholder="Enter rule name" /> 
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="addRuleDescrition" class="small text-muted text-uppercase">Descrition</label>
+                                       <textarea rows="1" class="form-control" id="addRuleDescrition" placeholder="Enter rule description"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="rule-1-created-date" class="small text-muted text-uppercase">Date</label>
+                                       <div class="datepicker-holder">
+                                          <input type='text' class="form-control" id="rule-1-created-date" value="05/27/2016, 12:00 AM" disabled /> 
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
+                        </li>
+                        <li>
+                           <h4>Trigger</h4>
+                           <div class="wiz-step">
+                              <form action="">
+                                 <fieldset>
+                                    <div class="form-group">
+                                       <div class="row hor-gut-10px">
+                                          <div class="col-sm-6">
+                                             <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                             <div class="datepicker-holder">
+                                                <input type='text' class="form-control datepicker" id="triggerStart" /> 
+                                             </div>
+                                          </div>
+                                          <div class="col-sm-6">
+                                             <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                             <div class="datepicker-holder">
+                                                <input type='text' class="form-control datepicker" id="triggerEnd" /> 
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                       <label for="triggerKeywords" class="small text-muted text-uppercase">Keywords</label>
+                                       <textarea rows="1" class="form-control" id="triggerKeywords">Rule, keywords, comma, delimiter, keywords, rule, delimiter, keywords, comma, delimiter, keywords</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="triggerCategory" class="small text-muted text-uppercase">Category</label>
+                                       <select class="form-control" id="triggerCategory">
+                                             <option value="1">Category #1</option>
+                                             <option value="2">Category #2</option>
+                                             <option value="3">Category #3</option>
+                                             <option value="4">Category #4</option>
+                                       </select>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                              <div class="btn-group btn-group-sm">
+                                 <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-plus"></i>
+                                    Add trigger
+                                    <span class="caret"></span>
+                                 </a>
+                                 <ul class="dropdown-menu">
+                                    <li>
+                                       <a href="#">Dropdown link</a>
+                                    </li>
+                                    <li>
+                                       <a href="#">Dropdown link</a>
+                                    </li>
+                                    <li>
+                                       <a href="#">Dropdown link</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <h4>Action</h4>
+                           <div class="wiz-step">
+                              <form action="">
                                  <div class="form-group">
-                                    <label for="addRuleName" class="small text-muted text-uppercase">Rule name</label>
-                                    <input type='text' class="form-control" id="addRuleName" placeholder="Enter rule name" /> 
+                                    <label for="actionProductList" class="small text-muted text-uppercase">Product List</label>
+                                    <textarea rows="1" class="form-control" id="actionProductList">ident#1, id_item#2, id#3, id_item#4</textarea>
+                                    <a href="#" class="btn btn-default btn-sm btn-file">
+                                       <i class="fa fa-file-text-o"></i>
+                                       Upload file
+                                    </a>
                                  </div>
-                                 <div class="form-group">
-                                    <label for="addRuleDescrition" class="small text-muted text-uppercase">Descrition</label>
-                                    <textarea rows="1" class="form-control" id="addRuleDescrition" placeholder="Enter rule description"></textarea>
-                                 </div>
-                              </fieldset>
-                           </form>
-                        </div>
-                     </li>
-                     <li>
-                        <h4>Trigger</h4>
-                     </li>
-                     <li>
-                        <h4>Action</h4>
-                     </li>
-                  </ol>
+                              </form>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
                </div>
                <div class="modal-footer">
-                  <!-- <button type="button" class="btn btn-sm btn-default" aria-hidden="true">Ok</button> -->
-                  <button type="button" class="btn btn-sm btn-link" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                  <hr />
+                  <button type="button" class="btn btn-link text-muted" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i> Cancel</button>
+                  <button type="button" class="btn btn-default" aria-hidden="true"><i class="fa fa-plus"></i> Add rule</button>
                </div>
             </div>
          </div>
