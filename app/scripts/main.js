@@ -80,19 +80,19 @@ $(document).ready(function() {
 
   // MODAL IMPROVE
   $('.modal').on('show.bs.modal', function() {
-    $(this).show();
-    setModalMaxHeight(this);
+    // $(this).show();
+    // setModalMaxHeight(this);
   });
   
   $('.modal').on('shown.bs.modal', function() {
     autosize.update($('textarea'));
   });
 
-  $(window).resize(function() {
-    if ($('.modal.in').length != 0) {
-      setModalMaxHeight($('.modal.in'));
-    }
-  });
+  // $(window).resize(function() {
+  //   if ($('.modal.in').length != 0) {
+  //     setModalMaxHeight($('.modal.in'));
+  //   }
+  // });
 
 
 });

@@ -99,6 +99,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         text-decoration: none;
       }
 
+      &.active {
+        background: #f0f0f0 !important; 
+        z-index: initial !important;
+      }
+
       &.text-muted {
         color: $gray-light;
 
@@ -120,6 +125,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
     > .fa {
       margin-right: 5px;
+    }
+
+    &.fa-right > .fa {
+      margin-left: 5px;
+      margin-right: 0;
     }
 
     > .caret {

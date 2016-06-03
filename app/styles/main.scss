@@ -91,6 +91,11 @@
       background: $gray-light;
     }
   }
+  span.status {
+    margin-right: 5px;
+    width: 9px;
+    height: 9px;
+  }
 
 
 // Tools
@@ -141,6 +146,58 @@
   }
 
 
+// DROPDOWN WITH STATES
+  .dropdown-menu.with-states {
+    padding: 10px;
+
+    > li > a {
+      padding: 3px 10px;
+
+      > .fa {
+        margin-right: 5px;
+      }
+    }
+
+    .divider {
+      // margin: 5px 0;
+      background-color: #f1f1f1;
+    }
+
+    .btn-group-justified {
+      .btn {
+        padding: 3px 10px;
+        line-height: 1.846;
+
+        font-size: 12px;
+        color: #666;
+      }
+
+      .btn + .btn {
+        border-left: 1px solid $body-bg;
+      }
+
+      &.filter-range {
+        > .btn {
+          text-align: left;
+          padding-left: 0;
+          padding-right: 0;
+          width: 125px;
+
+          + .btn {
+            width: 130px;
+            padding-left: 5px;
+          }
+        }
+
+        .datepicker {
+          box-shadow: none;
+          border-color: transparent !important;
+        }
+      }
+    }
+  }
+
+
 // Compl table
   .lead-btn {
     margin-bottom: 20px;
@@ -171,7 +228,7 @@
   .btn-group.checkbox-inside {
     margin-left: 12px;
 
-    .btn {
+    > .btn {
       box-shadow: none;
       background: #efefef;
 
@@ -190,10 +247,12 @@
         }  
       }
 
+
       .checkbox {
         margin: 0;
       }
     }
+
   }
 
   .checkbox-inside-hint {
@@ -203,7 +262,7 @@
 
   .table {
     margin-top: 23px;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 
     & + hr {
       margin-top: 2px;
@@ -411,4 +470,8 @@
         margin-bottom: -6px;
       }
     }
+  }
+
+  .table-footer {
+    margin-bottom: 70px;
   }

@@ -139,15 +139,27 @@
                      <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                      </a>
-                     <ul class="dropdown-menu">
+                     <ul class="dropdown-menu with-states">
                         <li>
                            <a href="#">All</a>
                         </li>
+                        <li class="divider"></li>
                         <li>
                            <a href="#">None</a>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                           <a href="#">Other states</a>
+                           <div class="btn-group btn-group-justified" role="group">
+                              <a class="btn btn-sm btn-link active" href="#">Active</a>
+                              <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <div class="btn-group btn-group-justified" role="group">
+                              <a class="btn btn-sm btn-link" href="#">Enabled</a>
+                              <a class="btn btn-sm btn-link" href="#">Disabled</a>
+                           </div>
                         </li>
                      </ul>
                   </div>
@@ -158,15 +170,17 @@
                         Bulk actions
                         <span class="caret"></span>
                      </a>
-                     <ul class="dropdown-menu">
+                     <ul class="dropdown-menu with-states">
                         <li>
-                           <a href="#">Dropdown link</a>
+                           <a href="#"><i class="fa fa-times"></i>Delete</a>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                           <a href="#">Dropdown link</a>
+                           <a href="#"><span class="status bg-active"></span>Enable</a>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                           <a href="#">Dropdown link</a>
+                           <a href="#"><span class="status bg-inactive"></span>Disable</a>
                         </li>
                      </ul>
                   </div>
@@ -178,15 +192,38 @@
                         Filter
                         <span class="caret"></span>
                      </a>
-                     <ul class="dropdown-menu">
+                     <ul class="dropdown-menu dropdown-menu-right with-states">
                         <li>
-                           <a href="#">Dropdown link</a>
+                           <div class="btn-group btn-group-justified filter-range" role="group">
+                              <div class="btn">
+                                 <label for="filterStart" class="small text-muted text-uppercase">Start</label>
+                                 <div class="datepicker-holder">
+                                    <input type='text' class="form-control datepicker" id="filterStart" /> 
+                                 </div>
+                              </div>
+                              <div class="btn text-left">
+                                 <label for="filterEnd" class="small text-muted text-uppercase">End</label>
+                                 <div class="datepicker-holder">
+                                    <input type='text' class="form-control datepicker" id="filterEnd" /> 
+                                 </div>
+                              </div>
+                           </div>
                         </li>
+                         <li class="divider"></li>
                         <li>
-                           <a href="#">Dropdown link</a>
+                           <label for="filterStart" class="small text-muted text-uppercase">Staus</label>
+                           <div class="btn-group btn-group-justified" role="group">
+                              <a class="btn btn-sm btn-link active" href="#">Active</a>
+                              <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div>
                         </li>
+                        <li class="divider"></li>
                         <li>
-                           <a href="#">Dropdown link</a>
+                           <label for="filterStart" class="small text-muted text-uppercase">Actuality</label>
+                           <div class="btn-group btn-group-justified" role="group">
+                              <a class="btn btn-sm btn-link" href="#">Enabled</a>
+                              <a class="btn btn-sm btn-link" href="#">Disabled</a>
+                           </div>
                         </li>
                      </ul>
                   </div>
@@ -532,6 +569,16 @@
                </tbody>
             </table>
             <!-- <hr /> -->
+
+            <div class="row table-footer">
+               <div class="col-sm-6">
+                  <p class="small text-nowrap"><span>10</span> of <span>22</span> rules</p>
+               </div>
+               <div class="col-sm-6 text-right">
+                  <a href="#" class="btn btn-sm btn-link text-muted"><i class="fa fa-angle-left"></i>Previous</a>
+                  <a href="#" class="btn btn-sm btn-link fa-right">Next <i class="fa fa-angle-right"></i></a>
+               </div>
+            </div>
          </div>
       </div>
 
