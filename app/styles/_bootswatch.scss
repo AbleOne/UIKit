@@ -99,6 +99,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         text-decoration: none;
       }
 
+      &.dropdown-toggle:focus {
+        background: #f3f3f3;
+      }
+
       &.active {
         background: #f0f0f0 !important; 
         z-index: initial !important;
@@ -202,17 +206,32 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 }
 
 // Forms ======================================================================
+  .input-addon {
+    box-shadow: inset 0 -1px 0 #ddd;
+  }
 
+  // complex input
   .complex-input {
-    position: relative;
-    
+    display: table;
+    width: 100%;
+
     .input-addon {
-      position: absolute;
-      left: 0;
-      top:0;
+      padding-right: 10px;
+    }
+
+    .input-addon,
+    .input-addon + .form-control {
+      display: table-cell;
+      line-height: 1.1 !important;
+
+      color: $headings-color;
+    }
+
+    .input-addon.text-muted {
+      color: $text-muted;
     }
     
-
+    // complex input sizing
     &.complex-input-lg {
       .input-addon,
       .form-control,
@@ -231,10 +250,24 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     line-height: 1.4 !important;
   }
 
+  textarea.lead,
+  textarea.lead.form-control {
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 0;
+    width: 100%;
+    display: block;
+  }
+
+  tr.inactive .input-addon,
   tr.inactive .form-control,
   tr.inactive textarea {
     box-shadow: none;
     border-color: transparent !important;
+  }
+
+  tr.inactive .rule-desc {
+    display: none;
   }
 
   textarea:focus {

@@ -8,7 +8,7 @@
   // 1.2) FONT AWESOME 
     $fa-font-path: "../bower_components/font-awesome/fonts";
   // 1.3) ICOMOON
-    $icomoon-font-path: "/fonts";
+    // $icomoon-font-path: "/fonts";
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
@@ -41,6 +41,20 @@
     line-height: 1.5;
   }
 
+  .active .fa.text-muted {
+    color: inherit;
+  }
+
+  a > .fa {
+    margin-right: 5px;
+  }
+
+  .label > .fa {
+    margin-right: 2px;
+  }
+
+  .active a.text-muted,
+  a.text-muted.active,
   a.text-muted:hover {
     color: #000;
     text-decoration: none;
@@ -114,6 +128,12 @@
       padding-left: 10px;
     }
   }
+
+  // margins
+    // bottom
+      .mb-6 {
+        margin-bottom: 6px;
+      }
 
 
 // QUICK SEARCH
@@ -203,15 +223,17 @@
     margin-bottom: 20px;
   }
   
-  a.list-group-item {
-    &:focus {
-      outline: none;
-      background: transparent;
-    }
+  a.list-group-item:focus {
+    outline: none;
+    background: transparent;
   }
   
   .list-group-item[aria-expanded="true"] {
     font-weight: bold;
+
+    &:hover {
+      background: transparent;
+    }
   }
   .list-group-item[data-toggle="collapse"] + div {
     position: relative;
@@ -455,13 +477,6 @@
           margin-right: 10px;
         }
 
-      }
-      textarea.lead {
-        font-size: 13px;
-        line-height: 1.3;
-        margin-bottom: 0;
-        width: 100%;
-        display: block;
       }
 
       // paddings, margins
