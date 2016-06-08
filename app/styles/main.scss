@@ -53,6 +53,13 @@
     margin-right: 2px;
   }
 
+  .text-muted-light {
+    color: $gray;
+  }
+
+  .active a.text-muted-light,
+  a.text-muted-light.active,
+  a.text-muted-light:hover,
   .active a.text-muted,
   a.text-muted.active,
   a.text-muted:hover {
@@ -62,9 +69,7 @@
 
 
   // BS Showcase
-  .mt-30 {
-    margin-top: 30px;
-  }
+
   .bs-sizing-example {
     .btn-group {
       margin-right: 20px;
@@ -134,6 +139,22 @@
       .mb-6 {
         margin-bottom: 6px;
       }
+      .mb-20 {
+        margin-bottom: 20px;
+      }
+      .mb-30 {
+        margin-bottom: 30px;
+      }
+    // top
+      .mt-30 {
+        margin-top: 30px;
+      }
+
+  // padding
+    // left
+      .pl-35 {
+        padding-left: 35px;
+      }
 
 
 // QUICK SEARCH
@@ -169,7 +190,15 @@
 // DROPDOWN WITH STATES
   .dropdown-menu.with-states {
     padding: 10px;
+    
+    > li > .complex-input {
+      padding: 3px 10px;
 
+      .input-addon {
+        padding-right: 5px;
+      }
+    }
+    
     > li > a {
       padding: 3px 10px;
 
@@ -218,6 +247,25 @@
   }
 
 
+// LINKS LIST With DATA
+  .data-links a {
+    // padding-left: 20px;
+    // position: relative;
+
+    &:before {
+      content: "(" attr(data-quantity) ")";
+      // margin-right: 5px;
+      display: inline-block;
+      min-width: 35px;
+    }
+  }
+
+
+// SideBar
+#collapseTags .complex-input .input-addon {
+  padding-right: 5px;
+}
+
 // Compl table
   .lead-btn {
     margin-bottom: 20px;
@@ -243,7 +291,7 @@
     border-top-color: transparent;
 
     ul {
-      margin: 0px 15px 10px 30px;
+      margin: 0px 25px 10px 20px;
     }
   }
 

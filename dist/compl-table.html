@@ -113,10 +113,17 @@
                   <a class="list-group-item" href="#status">Status</a>
                   <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseTags" aria-expanded="true">Tags</a>
                   <div id="collapseTags" class="collapse in" role="tabpanel">
-                     <ul class="list-unstyled">
-                        <li><a class="text-muted active" href="#"><i class="fa fa-tag"></i>Simulation</a></li>
-                        <li><a class="text-muted" href="#"><i class="fa fa-tag"></i>Tag #2</a></li>
-                        <li><a class="text-muted" href="#"><i class="fa fa-tag"></i>Other tag</a></li>
+                     <ul class="list-unstyled data-links">
+                        <li><a data-quantity="45" class="text-muted-light active" href="#"><i class="fa fa-tag"></i>Simulation</a></li>
+                        <li><a data-quantity="5" class="text-muted-light" href="#"><i class="fa fa-tag"></i>Tag #2</a></li>
+                        <li><a  data-quantity="12" class="text-muted-light" href="#"><i class="fa fa-tag"></i>Other tag</a></li>
+                        <li class="pl-35">
+                           <div class="complex-input mb-30">
+                              <span class="input-addon"><i class="fa fa-plus text-muted"></i></span>
+                              <input type='text' class="form-control " id="addNewTag" placeholder="Add new tag" /> 
+                           </div>
+                        </li>
+
                      </ul>
                   </div>
                   <a class="list-group-item" href="#actuality">Actuality</a>
@@ -182,13 +189,19 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                           <a href="#"><i class="fa fa-tag text-muted"></i>Simulation</a>
+                           <a href="#"><i class="fa fa-tag text-muted-light"></i>Simulation</a>
                         </li>
                         <li>
-                           <a href="#"><i class="fa fa-tag text-muted"></i>Tag #2</a>
+                           <a href="#"><i class="fa fa-tag text-muted-light"></i>Tag #2</a>
                         </li>
                         <li>
-                           <a href="#"><i class="fa fa-tag text-muted"></i>Other tag</a>
+                           <a href="#"><i class="fa fa-tag text-muted-light"></i>Other tag</a>
+                        </li>
+                        <li>
+                           <div class="complex-input mb-20">
+                              <span class="input-addon"><i class="fa fa-tag text-muted"></i></span>
+                              <input type='text' class="form-control " id="addNewTag" placeholder="Add new tag" /> 
+                           </div>
                         </li>
 
                      </ul>
