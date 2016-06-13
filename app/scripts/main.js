@@ -49,7 +49,8 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
-  $('#applyFilters .btn-default').dropdown('toggle');
+  // $('#applyFilters .btn-default').dropdown('toggle');
+  $('#applyFilters .btn').dropdown('toggle');
 
   // DatePicker
   var now = moment().calendar();
