@@ -44,6 +44,13 @@ $(document).ready(function() {
   // BS tooltip
   $('.bs-component [data-toggle="tooltip"]').tooltip();
 
+  // BS dropdown (prevent unexpected menu close)
+  $(document).on('click', '.dropdown-menu', function(e) {
+    e.stopPropagation();
+  });
+
+  $('#applyFilters .btn-default').dropdown('toggle');
+
   // DatePicker
   var now = moment().calendar();
   $('.datepicker').datetimepicker({

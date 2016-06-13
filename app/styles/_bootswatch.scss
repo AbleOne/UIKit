@@ -556,6 +556,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
   }
 
+  .text-overflow .checkbox.pull-right {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
   // Remove the Bootstrap feedback styles for input addons
   .input-group-addon {
     .has-warning &, .has-error &, .has-success & {

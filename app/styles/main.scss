@@ -156,6 +156,16 @@
         padding-left: 35px;
       }
 
+  // text
+    .text-overflow {
+      overflow: hidden;
+      display: block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 16em;
+    }
+
+
 
 // QUICK SEARCH
   form[role="search"] {
@@ -188,7 +198,7 @@
 
 
 // DROPDOWN WITH STATES
-  .dropdown-menu.with-states {
+  .with-states {
     padding: 10px;
     
     > li > .complex-input {
@@ -205,6 +215,16 @@
       > .fa {
         margin-right: 5px;
       }
+    }
+
+    > li > span {
+      > .fa {
+        margin-right: 5px;
+      } 
+    }
+
+    &.tags > li > .text-overflow {
+      max-width: none;    
     }
 
     .divider {
@@ -251,6 +271,8 @@
   .data-links a {
     // padding-left: 20px;
     // position: relative;
+    @include text-overflow();
+    display: block;
 
     &:before {
       content: "(" attr(data-quantity) ")";

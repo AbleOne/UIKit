@@ -198,13 +198,13 @@
                         </li>
                         <li class="divider"></li>
                         <li>
-                           <a href="#"><i class="fa fa-tag text-muted-light"></i>Simulation</a>
+                           <a class="text-overflow" href="#"><i class="fa fa-tag text-muted-light"></i>Simulation Simulation Simulation Simulation Simulation </a>
                         </li>
                         <li>
-                           <a href="#"><i class="fa fa-tag text-muted-light"></i>Tag #2</a>
+                           <a class="text-overflow" href="#"><i class="fa fa-tag text-muted-light"></i>Tag #2</a>
                         </li>
                         <li>
-                           <a href="#"><i class="fa fa-tag text-muted-light"></i>Other tag</a>
+                           <a class="text-overflow" href="#"><i class="fa fa-tag text-muted-light"></i>Other tag</a>
                         </li>
                         <li>
                            <div class="complex-input mb-20">
@@ -242,18 +242,56 @@
                         </li>
                          <li class="divider"></li>
                         <li>
-                           <label for="filterStart" class="small text-muted text-uppercase">Staus</label>
-                           <div class="btn-group btn-group-justified" role="group">
+                           <label for="filterStatus" class="small text-muted text-uppercase">Staus</label>
+                           <!-- <div class="btn-group btn-group-justified" role="group" id="filterStatus">
                               <a class="btn btn-sm btn-link active" href="#">Active</a>
                               <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div>
+                           <div class="mb-20"></div>
+                           <div class="btn-group btn-group-justified" role="group" id="filterStatus">
+                              <a class="btn btn-sm btn-link active" href="#">Active</a>
+                              <a class="btn btn-sm btn-link" href="#">N/A</a>
+                              <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div> -->
+                           <div class="btn-group btn-group-justified" data-toggle="buttons" id="filterStatus">
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option1" autocomplete="off">Active
+                              </label>
+                              <label class="btn btn-link active">
+                                 <input type="radio" name="options" id="option2" autocomplete="off" checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option3" autocomplete="off">Inactive
+                              </label>
                            </div>
                         </li>
                         <li class="divider"></li>
                         <li>
-                           <label for="filterStart" class="small text-muted text-uppercase">Actuality</label>
-                           <div class="btn-group btn-group-justified" role="group">
+                           <label for="filterActuality" class="small text-muted text-uppercase">Actuality</label>
+                           <!-- <div class="btn-group btn-group-justified" role="group" id="filterActuality">
                               <a class="btn btn-sm btn-link" href="#">Enabled</a>
                               <a class="btn btn-sm btn-link" href="#">Disabled</a>
+                           </div> -->
+                           
+                           <ul class="with-states tags" id="filterActuality">
+                              <li>
+                                 <span class="text-overflow" >
+                                    <div class="checkbox pull-right"><label><input type="checkbox"></label></div>
+                                    <i class="fa fa-tag text-muted-light"></i>Simulation Simulation Simulation Simulation Simulation </span>
+                              </li>
+                              <li>
+                                 <span class="text-overflow"><i class="fa fa-tag text-muted-light"></i>Tag #2</span>
+                              </li>
+                              <li>
+                                 <span class="text-overflow"><i class="fa fa-tag text-muted-light"></i>Other tag</span>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="text-right">
+                           <div class="btn-group" role="group">
+                              <a class="btn btn-sm btn-link" href="#"><i class="fa fa-times"></i>Cancel</a>
+                              <a class="btn btn-sm btn-default" href="#"><i class="fa fa-check"></i> Apply</a>
                            </div>
                         </li>
                      </ul>
