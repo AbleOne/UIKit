@@ -562,6 +562,31 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     margin-left: 10px;
   }
 
+  .checkbox.checkbox-right {
+        margin: 0;
+
+        label {
+          padding-right: 25px;
+          padding-left: 0;
+          width: 100%;
+            
+            > span {
+              display: inline-block;
+              vertical-align: middle;
+
+              > .fa {
+                margin-right: 5px;
+              }
+            }
+
+            input[type="checkbox"] {
+              margin-right: -25px;
+              margin-left: 0;
+              float: right;
+            }
+        }
+  }
+
   // Remove the Bootstrap feedback styles for input addons
   .input-group-addon {
     .has-warning &, .has-error &, .has-success & {

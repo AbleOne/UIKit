@@ -162,7 +162,7 @@
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
-      max-width: 16em;
+      max-width: 17em;
     }
 
 
@@ -209,19 +209,19 @@
       }
     }
     
-    > li > a {
+    > li > a,
+    > li > .checkbox-right {
       padding: 3px 10px;
 
-      > .fa {
+      .fa {
         margin-right: 5px;
       }
     }
 
-    > li > span {
-      > .fa {
-        margin-right: 5px;
-      } 
+    > li > .checkbox-right:hover {
+      background-color: $dropdown-link-hover-bg;
     }
+
 
     &.tags > li > .text-overflow {
       max-width: none;    
