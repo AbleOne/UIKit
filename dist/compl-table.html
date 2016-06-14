@@ -177,25 +177,71 @@
                      </a>
                      <ul class="dropdown-menu with-states">
                         <li>
-                           <a href="#"><i class="fa fa-times"></i>Delete</a>
+                           <a class="text-overflow" href="#"><i class="fa fa-times"></i>Delete selected rules</a>
                         </li>
                         <li class="divider"></li>
                         <li>
-                           <a href="#"><span class="status bg-active"></span>Enable</a>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link active">
+                                 <input type="radio" name="options" id="option1" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled">
+                                 <input type="radio" name="options" id="option2" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option3" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow"><i class="status half-circle bg-active"></i><i class="status bg-inactive"></i>Enable / Disable</span>
                         </li>
-                        <li class="divider"></li>
+                        <!-- <li class="divider"></li>
                         <li>
                            <a href="#"><span class="status bg-inactive"></span>Disable</a>
-                        </li>
+                        </li> -->
                         <li class="divider"></li>
                         <li>
-                           <a class="text-overflow" href="#"><i class="fa fa-tag text-muted-light"></i>Simulation Simulation Simulation Simulation Simulation </a>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option1" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled active">
+                                 <input type="radio" name="options" id="option2" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option3" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow">
+                              <i class="fa fa-tag text-muted-light"></i>Simulation Simulation Simulation Simulation Simulation
+                           </span>
                         </li>
                         <li>
-                           <a class="text-overflow" href="#"><i class="fa fa-tag text-muted-light"></i>Tag #2</a>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option4" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled  active">
+                                 <input type="radio" name="options" id="option5" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option6" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow"><i class="fa fa-tag text-muted-light"></i>Tag #2</span>
                         </li>
                         <li>
-                           <a class="text-overflow" href="#"><i class="fa fa-tag text-muted-light"></i>Other tag</a>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link active">
+                                 <input type="radio" name="options" id="option7" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled ">
+                                 <input type="radio" name="options" id="option8" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option9" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow"><i class="fa fa-tag text-muted-light"></i>Other tag</span>
                         </li>
                         <li>
                            <div class="complex-input mb-20">
@@ -220,13 +266,13 @@
                               <div class="btn">
                                  <label for="filterStart" class="small text-muted text-uppercase">Start</label>
                                  <div class="datepicker-holder">
-                                    <input type='text' class="form-control datepicker" id="filterStart" /> 
+                                    <input type='text' class="form-control datepicker" id="filterStart" placeholder="Select start date" /> 
                                  </div>
                               </div>
                               <div class="btn text-left">
                                  <label for="filterEnd" class="small text-muted text-uppercase">End</label>
                                  <div class="datepicker-holder">
-                                    <input type='text' class="form-control datepicker" id="filterEnd" /> 
+                                    <input type='text' class="form-control datepicker" id="filterEnd" placeholder="Select end date" /> 
                                  </div>
                               </div>
                            </div>
@@ -268,33 +314,33 @@
                         <li>
                            <div class="checkbox checkbox-right">
                               <label>
+                                 <input type="checkbox">
                                  <span class="text-overflow">
                                     <i class="fa fa-tag text-muted-light"></i>
                                     Simulation Simulation Simulation Simulation Simulation
                                  </span>
-                                 <input type="checkbox">
                               </label>
                            </div>
                         </li>
                         <li>
                            <div class="checkbox checkbox-right">
                               <label>
+                                 <input type="checkbox">
                                  <span class="text-overflow">
                                     <i class="fa fa-tag text-muted-light"></i>
                                     Tag #2
                                  </span>
-                                 <input type="checkbox">
                               </label>
                            </div>
                         </li>
                         <li>
                            <div class="checkbox checkbox-right">
                               <label>
+                                 <input type="checkbox">
                                  <span class="text-overflow">
                                     <i class="fa fa-tag text-muted-light"></i>
                                     Other tag
                                  </span>
-                                 <input type="checkbox">
                               </label>
                            </div>
                         </li>
@@ -398,13 +444,13 @@
                                        <div class="form-group">
                                           <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
                                           <div class="datepicker-holder">
-                                             <input type='text' class="form-control datepicker" id="triggerStart" /> 
+                                             <input type='text' class="form-control datepicker" id="triggerStart"  placeholder="Select start date" /> 
                                           </div>
                                        </div>
                                        <div class="form-group">
                                           <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
                                           <div class="datepicker-holder">
-                                             <input type='text' class="form-control datepicker" id="triggerEnd" /> 
+                                             <input type='text' class="form-control datepicker" id="triggerEnd"  placeholder="Select end date" /> 
                                           </div>
                                        </div>
                                     </fieldset>
@@ -555,13 +601,13 @@
                                        <div class="form-group">
                                           <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
                                           <div class="datepicker-holder">
-                                             <input type='text' class="form-control datepicker" id="triggerStart" /> 
+                                             <input type='text' class="form-control datepicker" id="triggerStart"  placeholder="Select start date" /> 
                                           </div>
                                        </div>
                                        <div class="form-group">
                                           <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
                                           <div class="datepicker-holder">
-                                             <input type='text' class="form-control datepicker" id="triggerEnd" /> 
+                                             <input type='text' class="form-control datepicker" id="triggerEnd"  placeholder="Select end date" /> 
                                           </div>
                                        </div>
                                     </fieldset>

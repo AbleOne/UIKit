@@ -89,8 +89,17 @@
     height: 10px;
     display: inline-block;
 
+    &.half-circle {
+      margin-right: -5px;
+      border-radius: 5px 0 0 5px;
+      width: 6px;
+
+      z-index: 1;
+      position: relative;
+    }
+
     & + .status {
-      margin-right: 10px;
+      margin-right: 5px;
     }
 
     &.bg-success,
@@ -115,6 +124,13 @@
     width: 9px;
     height: 9px;
   }
+
+  .rotate-45 {
+    display: block;
+    transform: rotate(45deg);
+  }
+
+
 
 
 // Tools
@@ -162,7 +178,7 @@
       display: block;
       white-space: nowrap;
       text-overflow: ellipsis;
-      max-width: 17em;
+      // max-width: 17em;
     }
 
 
@@ -210,6 +226,7 @@
     }
     
     > li > a,
+    > li > span,
     > li > .checkbox-right {
       padding: 3px 10px;
 
@@ -217,7 +234,12 @@
         margin-right: 5px;
       }
     }
-
+    
+    > li > span {
+      margin-bottom: 3px;
+    }
+    
+    // > li > span:hover,
     > li > .checkbox-right:hover {
       background-color: $dropdown-link-hover-bg;
     }
@@ -233,7 +255,7 @@
     }
 
     .btn-group-justified {
-      .btn {
+      > .btn {
         padding: 3px 10px;
         line-height: 1.846;
 

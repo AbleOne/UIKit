@@ -86,6 +86,39 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
       color: #777;
     }
 
+    &-uncheckable {
+      @include box-shadow(none);
+      color: #777; //$btn-default-color;
+      border-color: transparent;
+
+      &:focus {
+        outline: none !important;
+      }
+
+      &:hover,
+      &:active {
+        background: transparent !important;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        opacity: 0.65;
+        filter: alpha(opacity=65);
+        box-shadow: none;
+      }
+
+      &.active {
+        background: #f0f0f0 !important; 
+        z-index: initial !important;
+      }
+
+      input[type="radio"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        pointer-events: none;
+      }
+    }
+
     &-link {
       // border-radius: $btn-border-radius-base;
       @include box-shadow(none);
@@ -99,9 +132,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
         text-decoration: none;
       }
 
-      &.dropdown-toggle:focus {
-        background: #f3f3f3;
-      }
+      // &.dropdown-toggle:focus {
+      //   background: #f3f3f3;
+      // }
 
       &.active {
         background: #f0f0f0 !important; 
@@ -142,6 +175,35 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
       border-top-color: #bbb !important; //$gray
     }
   }
+
+  .btn-group.open > .dropdown-toggle {
+    background: #f3f3f3;
+  }
+
+  .btn-uncheckable {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $btn-font-weight;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+    @include user-select(none);
+
+  }
+    .btn-group > .btn-uncheckable {
+      position: relative;
+      float: left;
+    }
+
+    .btn-group-sm > .btn-uncheckable,
+    .btn-uncheckable.btn-sm {
+      @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+    }
 
   .btn-group.open .dropdown-toggle {
     box-shadow: none;
@@ -564,15 +626,16 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
 
   .checkbox.checkbox-right {
         margin: 0;
+        max-height: 28px;
 
         label {
-          padding-right: 25px;
+          padding-right: 0; //25px;
           padding-left: 0;
           width: 100%;
             
             > span {
-              display: inline-block;
-              vertical-align: middle;
+              // display: inline-block;
+              // vertical-align: middle;
 
               > .fa {
                 margin-right: 5px;
@@ -580,8 +643,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
             }
 
             input[type="checkbox"] {
-              margin-right: -25px;
+              margin-right: 0; //-25px;
               margin-left: 0;
+              margin-left: 5px;
               float: right;
             }
         }
