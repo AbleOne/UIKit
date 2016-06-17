@@ -125,11 +125,6 @@
     height: 9px;
   }
 
-  .rotate-45 {
-    display: block;
-    transform: rotate(45deg);
-  }
-
 
 
 
@@ -149,6 +144,11 @@
       padding-left: 10px;
     }
   }
+
+  // width
+    .min-w-280 {
+      min-width: 280px;
+    }
 
   // margins
     // bottom

@@ -81,6 +81,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
       outline: 0 !important;
     }
 
+    &.disabled,
+    &[disabled] {
+      cursor: default;
+    }
+
     &-default {
       border-color: #efefef;
       color: #777;
@@ -273,35 +278,39 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   }
 
   // complex input
-  .complex-input {
-    display: table;
-    width: 100%;
+    .complex-input {
+      display: table;
+      width: 100%;
 
-    .input-addon {
-      padding-right: 10px;
-    }
+      .input-addon {
+        padding-right: 10px;
+      }
 
-    .input-addon,
-    .input-addon + .form-control {
-      display: table-cell;
-      line-height: 1.1 !important;
-
-      color: $headings-color;
-    }
-
-    .input-addon.text-muted {
-      color: $text-muted;
-    }
-    
-    // complex input sizing
-    &.complex-input-lg {
       .input-addon,
-      .form-control,
-      input[type="text"] {
-        font-size: 18px;
+      .input-addon + .form-control {
+        display: table-cell;
+        line-height: 1.1 !important;
+
+        color: $headings-color;
+      }
+
+      .input-addon.text-muted {
+        color: $text-muted;
+      }
+      
+      // complex input sizing
+      &.complex-input-lg {
+        .input-addon,
+        .form-control,
+        input[type="text"] {
+          font-size: 18px;
+        }
       }
     }
-  }
+
+    tr.inactive .complex-input .input-addon {
+      color: lighten($text-color, 8%); 
+    }
 
   label {
     font-weight: normal;
@@ -382,6 +391,20 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
   }
 
+  tr.inactive textarea[disabled],
+  tr.inactive textarea.form-control[disabled],
+  tr.inactive input.form-control[disabled]:not([id^="rule-"]),
+  tr.inactive input[type=text]:not([id^="rule-"]),
+  tr.inactive [type=text][disabled].form-control:not([id^="rule-"]),
+  tr.inactive input[type=password][disabled],
+  tr.inactive input[type=email][disabled],
+  tr.inactive input[type=number][disabled] {
+    border: none;
+    color: lighten($text-color, 8%); // inherit;
+    background: transparent;
+    cursor: auto !important;
+  }
+
   input[type=text],
   input[type=text].form-control {
     text-overflow: ellipsis;
@@ -440,6 +463,12 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     &:focus {
       @include box-shadow(inset 0 -2px 0 $brand-primary);
       background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAAJ1BMVEUhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISF8S9ewAAAADHRSTlMAAgMJC0uWpKa6wMxMdjkoAAAANUlEQVR4AeXJyQEAERAAsNl7Hf3X6xt0QL6JpZWq30pdvdadme+0PMdzvHm8YThHcT1H7K0BtOMDniZhWOgAAAAASUVORK5CYII=);
+    }
+
+    &.disabled,
+    &[disabled] {
+      cursor: default;
+      color: lighten($text-color, 8%);
     }
 
     &[multiple] {
@@ -751,6 +780,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     border-color: transparent !important;
     height: 23px;
     overflow: hidden;
+
+    .tag {
+      opacity: .8;
+    }
   }
 
 

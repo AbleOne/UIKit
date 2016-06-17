@@ -11,28 +11,50 @@ console.log('LucidWorks rocks!');
 //----------------------------------------------------
 
 // 0) functions	
-// MODAL IMPROVE
-  function setModalMaxHeight(element) {
-    var $element = $(element),
-      $content = $element.find('.modal-content');
-    var borderWidth = $content.outerHeight() - $content.innerHeight();
-    var dialogMargin = $(window).width() < 768 ? 20 : 60;
-    var contentHeight = $(window).height() - (dialogMargin + borderWidth);
-    var headerHeight = $element.find('.modal-header').outerHeight() || 0;
-    var footerHeight = $element.find('.modal-footer').outerHeight() || 0;
-    var maxHeight = contentHeight - (headerHeight + footerHeight);
+  // MODAL IMPROVE
+    function setModalMaxHeight(element) {
+      var $element = $(element),
+        $content = $element.find('.modal-content');
+      var borderWidth = $content.outerHeight() - $content.innerHeight();
+      var dialogMargin = $(window).width() < 768 ? 20 : 60;
+      var contentHeight = $(window).height() - (dialogMargin + borderWidth);
+      var headerHeight = $element.find('.modal-header').outerHeight() || 0;
+      var footerHeight = $element.find('.modal-footer').outerHeight() || 0;
+      var maxHeight = contentHeight - (headerHeight + footerHeight);
 
-    $content.css({
-      'overflow': 'hidden'
-    });
-
-    $element
-      .find('.modal-body').css({
-        'max-height': maxHeight,
-        'overflow-y': 'auto'
+      $content.css({
+        'overflow': 'hidden'
       });
-  }
-//	/.functions
+
+      $element
+        .find('.modal-body').css({
+          'max-height': maxHeight,
+          'overflow-y': 'auto'
+        });
+    }
+
+  // Disable / Enable Row Ctrls
+    var formCtrlsEditability = function(selector, typesOfCtrls, set) {
+        var typesOfCtrlsArr = typesOfCtrls.split(', ');
+
+        $.each(typesOfCtrlsArr,function(i){
+          $(selector).find(typesOfCtrlsArr[i]).each(function() {
+            // check for unnecessary Ctrls
+            if (!$(this).is(':checkbox') && !$(this).is('[id^="rule-created"]') && !$(this).is('[id^="rule-edited"]') ) {
+              // set / unset `disabled` property
+              if (!set) {
+                $(this).prop('disabled', true);
+              } else {
+                $(this).prop('disabled', false);
+              }
+            }
+          });
+
+        });
+    };
+
+
+//  /.functions
 
 
 // document.ready()
@@ -49,7 +71,7 @@ $(document).ready(function() {
     e.stopPropagation();
   });
 
-  // $('#applyFilters .btn-default').dropdown('toggle');
+  // BS dropdown toggle only by these btns:
   $('#applyFilters .btn').dropdown('toggle');
 
   // DatePicker
@@ -68,11 +90,16 @@ $(document).ready(function() {
     tagClass: 'label label-default'
   });
 
+  // Set Editability of Ctrls in Rows
+  var CtrlsToManipulate = 'input, textarea, select, button';
+      formCtrlsEditability('.rules-list tr.inactive', CtrlsToManipulate, false);
+
   // Row expand
   $('.rules-list .column-more').on('click', function() {
     var thisTR = $(this).closest('tr');
     if (thisTR.hasClass('inactive')) {
       thisTR.removeClass('inactive');
+      formCtrlsEditability(thisTR, CtrlsToManipulate, true);
     }
   });
 
@@ -82,6 +109,7 @@ $(document).ready(function() {
     if (!thisTR.hasClass('inactive')) {
       // ... save changes
       // ... and
+      formCtrlsEditability(thisTR, CtrlsToManipulate, false);
       thisTR.addClass('inactive');
     }
   });
