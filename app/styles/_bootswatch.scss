@@ -401,6 +401,14 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
   }
 
+  .readonly {
+    line-height: 1.4;
+    display: inline-block;
+    min-height: 20px;
+    width: 100%;
+    margin-top: 2px;
+  }
+
   .list-group-item.collapse-by-icon + .list-group-item-content,
   tr.inactive {
 
@@ -979,6 +987,32 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
   .well {
     border-radius: 0;
     @include box-shadow(none);
+
+    &.well-sm {
+      padding: 9px 8px;
+    }
+
+    &.well-transp {
+      background: transparent;
+    }
+
+    &.well-outline {
+      border: 1px solid $table-border-color;
+    }
+
+    .well-title {
+      .btn {
+        padding: 1px 3px;
+
+        &:first-child {
+          margin-right: -5px;
+        }
+
+        .fa {
+          margin: 0;
+        }
+      }
+    }
   }
 
   .panel {
