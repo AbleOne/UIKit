@@ -1,0 +1,1135 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+   <meta charset="utf-8">
+   <title>UI Kit (Sidebar)</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="shortcut icon" href="favicon.ico">
+   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+   <link rel="stylesheet" href="styles/vendor.css">
+   <link rel="stylesheet" href="styles/main.css">
+   <script src="scripts/vendor/modernizr.js"></script>
+
+</head>
+<body>
+   <!--[if lt IE 10]>
+   <p class="browsehappy">
+      You are using an <strong>outdated</strong>
+      browser. Please
+      <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+   </p>
+   <![endif]-->
+
+   <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+         <div class="navbar-header">
+            <a href="../" class="navbar-brand">Lucidworks</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+         </div>
+         <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+               <li>
+                  <a href="#">Link #1</a>
+               </li>
+               <li>
+                  <a href="#">Link #2</a>
+               </li>
+               <li>
+                  <a href="#">Link #3</a>
+               </li>
+               <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     Dropdown
+                     <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li>
+                        <a href="#">Action</a>
+                     </li>
+                     <li>
+                        <a href="#">Another action</a>
+                     </li>
+                     <li>
+                        <a href="#">Something else here</a>
+                     </li>
+                     <li role="separator" class="divider"></li>
+                     <li>
+                        <a href="#">Separated link</a>
+                     </li>
+                     <li role="separator" class="divider"></li>
+                     <li>
+                        <a href="#">One more separated link</a>
+                     </li>
+                  </ul>
+               </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+               <li>
+                  <a href="#" target="_blank">Right item #1</a>
+               </li>
+               <li>
+                  <a href="#" target="_blank">Right item #2</a>
+               </li>
+            </ul>
+
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+
+      <div class="row">
+         <div class="col-xs-12">
+            <h1>Search simlation sidebar</h1>
+            <p class="lead">Showcase</p>
+         </div>
+      </div>
+
+      <div class="row mb-100">
+         <!-- FILTERS SIDEBAR -->
+            <div class="col-sm-2">
+               <!-- <a href="#addRule" data-toggle="modal" class="btn btn-lg btn-block btn-default lead-btn">
+                  <i class="fa fa-plus"></i>
+                  Add rule
+               </a> -->
+               <div class="list-group" id="accordion">
+                  <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseTypes" aria-expanded="false">Rules type</a>
+                  <div id="collapseTypes" class="collapse" role="tabpanel">
+                     <ul class="list-unstyled">
+                        <li><a href="#">Option #1</a></li>
+                        <li><a href="#">Option #2</a></li>                     
+                     </ul>
+                  </div>
+                  <a class="list-group-item" href="#status">Status</a>
+                  <a class="list-group-item" role="button" data-toggle="collapse" href="#collapseTags" aria-expanded="true">Tags</a>
+                  <div id="collapseTags" class="collapse in" role="tabpanel">
+                     <ul class="list-unstyled data-links">
+                        <li><a data-quantity="45" class="text-muted-light active" href="#"><i class="fa fa-tag"></i>Simulation</a></li>
+                        <li><a data-quantity="5" class="text-muted-light" href="#"><i class="fa fa-tag"></i>Tag #2</a></li>
+                        <li><a  data-quantity="12" class="text-muted-light" href="#"><i class="fa fa-tag"></i>Other tag</a></li>
+                        <li class="pl-35">
+                           <div class="complex-input mb-30">
+                              <span class="input-addon"><i class="fa fa-plus text-muted"></i></span>
+                              <input type='text' class="form-control " id="addNewTag" placeholder="Add new tag" /> 
+                           </div>
+                        </li>
+
+                     </ul>
+                  </div>
+                  <a class="list-group-item" href="#actuality">Actuality</a>
+               </div>
+            </div>
+         <!-- /.FILTERS SIDEBAR -->
+
+         <!-- SEARCH RESULTS -->
+         <div class="col-sm-7">
+            
+             <div class="search-results">
+                 <h2>
+                     160 results found for: <span class="text-navy">"Bootdey"</span>
+                 </h2>
+                 
+     
+                 <div class="search-form">
+                     <form action="#" role="search">
+                        <div class="form-group mb-0">
+                           <div class="input-group input-group-lg">
+                              <input type="text" placeholder="Bootdey" name="search" class="form-control">
+                              <div class="input-group-btn">
+                                 <button class="btn btn-default" type="submit">Search</button>
+                              </div>
+                           </div>
+                      </div>
+                     </form>
+                 </div>
+                 <small class="mb-20">Request time  (0.23 seconds)</small>
+
+                 <div class="search-result">
+                     <h4><a href="#">Result</a></h4>
+                     <a href="#" class="search-link">www.example.com/search-result/</a>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi debitis, quos, et, perspiciatis veniam cum deserunt quam similique eligendi officiis doloremque itaque accusantium at necessitatibus velit quas excepturi magnam. Accusantium.
+                     </p>
+                 </div>
+
+                 <div class="hr-line-dashed"></div>
+                 <div class="search-result">
+                     <h4><a href="#">Result #1</a></h4>
+                     <a href="#" class="search-link">https://www.example.com/search-result/1</a>
+                     <p>
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi debitis, quos, et, perspiciatis veniam cum deserunt quam similique eligendi officiis doloremque itaque.
+                     </p>
+                 </div>
+                 <div class="hr-line-dashed"></div>
+
+                 <div class="search-result">
+                     <h4><a href="#">Result #2 | Searches</a></h4>
+                     <a href="#" class="search-link">https://www.example.com/search-result/2</a>
+                     <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi debitis
+                     </p>
+                 </div>
+                 <div class="hr-line-dashed"></div>
+
+                 <div class="search-result">
+                     <h4><a href="#">Result #3 | Search results</a></h4>
+                     <a href="#" class="search-link">www.example.com/search-result/3</a>
+                     <p>
+                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi debitis, quos, et, perspiciatis veniam cum deserunt quam similique eligendi officiis doloremque itaque accusantium at necessitatibus velit quas excepturi magnam. Accusantium.
+                     </p>
+                 </div>
+                 <div class="hr-line-dashed"></div>
+                 
+                 <div class="text-center mt-30 mb-6">
+                     <div class="btn-group">
+                         <a href="#" class="btn btn-link" type="button"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                         <a href="#" class="btn btn-link active">1</a>
+                         <a href="#" class="btn btn-link ">2</a>
+                         <a href="#" class="btn btn-link">3</a>
+                         <a href="#" class="btn btn-link">4</a>
+                         <a href="#" class="btn btn-link">5</a>
+                         <a href="#" class="btn btn-link">6</a>
+                         <a href="#" class="btn btn-link">7</a>
+                         <a href="#" class="btn btn-link" type="button"><i class="glyphicon glyphicon-chevron-right"></i> </a>
+                     </div>
+                 </div>
+             </div>
+                   
+         </div>
+         <!-- /.SEARCH RESULTS -->
+
+         <!-- RULES SIDEBAR  -->
+         <div class="col-sm-3">
+            
+            <div class="well well-transp well-outline">
+               <div class="list-group" id="rules-sidebar">
+                  <!-- SEARCH RULE -->
+                  <a class="list-group-item collapse-by-icon" data-toggle="collapse" aria-expanded="true" data-parent="#rules-sidebar" href="#rule-1-row">
+                     <span class="pull-right">
+                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-angle-up"></i>
+                     </span>
+                     <span class="text-overflow">
+                        <i class="status bg-active mr-5"></i>
+                        Rule #1 name long, very-very long name
+                     </span>
+                  </a>
+                  <div id="rule-1-row" aria-expanded="true" class="collapse in list-group-item-content">
+                     <ul class="list-unstyled">
+                        <!-- RULE TRIGGER -->
+                        <li>
+                           <div class="form-group">
+                              <label for="triggerCategory" class="small text-muted text-uppercase">Category</label>
+                              <select class="form-control" id="triggerCategory" disabled>
+                                    <option value="1">Category #1</option>
+                                    <option value="2">Category #2</option>
+                                    <option value="3">Category #3</option>
+                                    <option value="4">Category #4</option>
+                              </select>
+                           </div>
+                        </li>
+                        <!-- /. RULE TRIGGER -->
+                        
+                        <!-- RULE PERIOD -->
+                        <li>
+                           <div class="row hor-gut-10">
+                              <div class="col-sm-6 form-group">
+                                 <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                 <div class="datepicker-holder">
+                                    <input type="text" class="form-control" id="triggerStartDate" value="06/20/2016" disabled /> 
+                                    <input type="text" class="form-control small" id="triggerStartTime" value="10:00 AM" disabled /> 
+                                 </div>
+                              </div>
+                              <div class="col-sm-6 form-group">
+                                 <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                 <input type="text" class="form-control" id="triggerEndDate" value="06/23/2016" disabled /> 
+                                 <input type="text" class="form-control small" id="triggerEndTime" value="12:00 AM" disabled /> 
+                              </div>
+                           </div>
+                        </li>
+                        <!-- /.RULE PERIOD -->
+
+                        <!-- RULE ACTION -->
+                        <li>
+                           <div class="form-group">
+                              <label for="actionRedirect" class="small text-muted text-uppercase">Redirect</label>
+                              <input type="text" class="form-control" id="actionRedirect" value="/screens/touch-technology"  disabled> 
+                           </div>
+                        </li>
+                        <!-- /.RULE ACTION -->
+                     </ul>
+                  </div>
+                  <!-- /.SEARCH RULE -->
+
+                  <!-- SEARCH RULE -->
+                  <a class="list-group-item collapse-by-icon" data-toggle="collapse" aria-expanded="false" data-parent="#rules-sidebar" href="#rule-2-row">
+                     <span class="pull-right">
+                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-angle-up"></i>
+                     </span>
+                     <span class="text-overflow">
+                        <i class="status bg-inactive mr-5"></i>
+                        Rule #2
+                     </span>
+                  </a>
+                  <div id="rule-2-row" aria-expanded="false" class="collapse list-group-item-content">
+                     <ul class="list-unstyled">
+                        <li>row1</li>
+                        <li>row2</li>
+                        <li>row3</li>
+                     </ul>
+                  </div>
+                  <!-- /.SEARCH RULE -->
+
+                  <!-- SEARCH RULE -->
+                  <a class="list-group-item collapse-by-icon" data-toggle="collapse" aria-expanded="false" data-parent="#rules-sidebar" href="#rule-3-row">
+                     <span class="pull-right">
+                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-angle-up"></i>
+                     </span>
+                     <span class="text-overflow">
+                        <i class="status bg-inactive mr-5"></i>
+                        Rule #3 name
+                     </span>
+                  </a>
+                  <div id="rule-3-row" aria-expanded="false" class="collapse list-group-item-content">
+                     <ul class="list-unstyled">
+                        <li>row1</li>
+                        <li>row2</li>
+                        <li>row3</li>
+                     </ul>
+                  </div>
+                  <!-- /.SEARCH RULE -->
+
+                  <!-- SEARCH RULE -->
+                  <a class="list-group-item collapse-by-icon" data-toggle="collapse" aria-expanded="false" data-parent="#rules-sidebar" href="#rule-4-row">
+                     <span class="pull-right">
+                        <i class="fa fa-angle-down"></i>
+                        <i class="fa fa-angle-up"></i>
+                     </span>
+                     <span class="text-overflow">
+                        <i class="status bg-inactive mr-5"></i>
+                        Rule #4
+                     </span>
+                  </a>
+                  <div id="rule-4-row" aria-expanded="false" class="collapse list-group-item-content">
+                     <ul class="list-unstyled">
+                        <li>row1</li>
+                        <li>row2</li>
+                        <li>row3</li>
+                     </ul>
+                  </div>
+                  <!-- /.SEARCH RULE -->
+
+               </div>
+            </div>
+
+            <!-- .PANEL-GROUP OPTION -->
+            <!-- <div class="panel-group" id="rules-sidebar">
+               <div class="panel panel-default">
+                  <div class="panel-heading">
+                     <h4 class="panel-title">
+                        <a data-toggle="collapse" aria-expanded="false" data-parent="#rules-sidebar" href="#rule-1-row" class="ml-10 pull-right">
+                           <i class="fa fa-angle-down"></i>
+                           <i class="fa fa-angle-up"></i>
+                        </a>
+                        <span class="text-overflow">Rule #1 name long, very-very long name</span>
+                     </h4>
+                  </div>
+                  <div id="rule-1-row" class="panel-collapse collapse">
+                     <ul class="list-group">
+                        <li class="list-group-item">
+                           <span class="glyphicon glyphicon-pencil text-primary"></span>
+                           <a href="http://fb.com/moinakbarali">Articles</a>
+                        </li>
+
+                        <li class="list-group-item">
+                           <span class="glyphicon glyphicon-flash text-success"></span>
+                           <a href="http://fb.com/moinakbarali">News</a>
+                        </li>
+
+                        <li class="list-group-item">
+                           <span class="glyphicon glyphicon-file text-info"></span>
+                           <a href="http://fb.com/moinakbarali">Newsletters</a>
+                        </li>
+
+                        <li class="list-group-item">
+                           <span class="glyphicon glyphicon-comment text-success"></span>
+                           <a href="http://fb.com/moinakbarali">Comments</a>
+                           <span class="badge">42</span>
+                        </li>
+
+                     </ul>
+                  </div>
+               </div>
+            </div> -->
+            <!-- .PANEL-GROUP OPTION -->
+         </div>
+         <!-- /.RULES SIDEBAR  -->
+
+      </div>
+
+      <div class="row">
+         <!-- MAIN -->
+         <div class="col-sm-offset-2 col-sm-10">
+            <div class="row">
+               <div class="col-sm-6">
+                  <div class="btn-group checkbox-inside">
+                     <div class="btn">
+                        <div class="checkbox">
+                           <label><input type="checkbox"></label>
+                        </div>
+                     </div>
+                     <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu with-states">
+                        <li>
+                           <a href="#">All</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <a href="#">None</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <div class="btn-group btn-group-justified" role="group">
+                              <a class="btn btn-sm btn-link active" href="#">Active</a>
+                              <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <div class="btn-group btn-group-justified" role="group">
+                              <a class="btn btn-sm btn-link" href="#">Enabled</a>
+                              <a class="btn btn-sm btn-link" href="#">Disabled</a>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <span class="small text-muted checkbox-inside-hint">2 rules selected</span>
+                  <div class="btn-group btn-group-lg">
+                     <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-clone"></i>
+                        Bulk actions
+                        <span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu with-states min-w-280">
+                        <li>
+                           <a class="text-overflow" href="#"><i class="fa fa-times"></i>Delete selected rules</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link active">
+                                 <input type="radio" name="options" id="option1" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled">
+                                 <input type="radio" name="options" id="option2" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option3" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow"><i class="status half-circle bg-active"></i><i class="status bg-inactive"></i>Enable / Disable</span>
+                        </li>
+                        <!-- <li class="divider"></li>
+                        <li>
+                           <a href="#"><span class="status bg-inactive"></span>Disable</a>
+                        </li> -->
+                        <li class="divider"></li>
+                        <li>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option1" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled active">
+                                 <input type="radio" name="options" id="option2" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option3" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow">
+                              <i class="fa fa-tag text-muted-light"></i>Simulation Simulation 
+                           </span>
+                        </li>
+                        <li>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option4" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled  active">
+                                 <input type="radio" name="options" id="option5" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option6" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow"><i class="fa fa-tag text-muted-light"></i>Tag #2</span>
+                        </li>
+                        <li>
+                           <div class="btn-group btn-group-sm pull-right" data-toggle="buttons">
+                              <label class="btn btn-link active">
+                                 <input type="radio" name="options" id="option7" autocomplete="off">On
+                              </label>
+                              <label class="btn-uncheckable btn-link disabled ">
+                                 <input type="radio" name="options" id="option8" autocomplete="off" disabled checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option9" autocomplete="off">Off
+                              </label>
+                           </div>
+                           <span class="text-overflow"><i class="fa fa-tag text-muted-light"></i>Other tag</span>
+                        </li>
+                        <li>
+                           <div class="complex-input mb-20">
+                              <span class="input-addon"><i class="fa fa-tag text-muted"></i></span>
+                              <input type='text' class="form-control " id="addNewTag" placeholder="Add new tag" /> 
+                           </div>
+                        </li>
+
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-sm-6 text-right">
+                  <div class="btn-group btn-group-lg">
+                     <a href="#" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+                        <i class="mi-filter_list"></i>
+                        Filter
+                        <span class="caret"></span>
+                     </a>
+                     <ul class="dropdown-menu dropdown-menu-right with-states min-w-280">
+                        <li>
+                           <div class="btn-group btn-group-justified filter-range" role="group">
+                              <div class="btn">
+                                 <label for="filterStart" class="small text-muted text-uppercase">Start</label>
+                                 <div class="datepicker-holder">
+                                    <input type='text' class="form-control datepicker" id="filterStart" placeholder="Select start date" /> 
+                                 </div>
+                              </div>
+                              <div class="btn text-left">
+                                 <label for="filterEnd" class="small text-muted text-uppercase">End</label>
+                                 <div class="datepicker-holder">
+                                    <input type='text' class="form-control datepicker" id="filterEnd" placeholder="Select end date" /> 
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                         <li class="divider"></li>
+                        <li>
+                           <label for="filterStatus" class="small text-muted text-uppercase">Staus</label>
+                           <!-- <div class="btn-group btn-group-justified" role="group" id="filterStatus">
+                              <a class="btn btn-sm btn-link active" href="#">Active</a>
+                              <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div>
+                           <div class="mb-20"></div>
+                           <div class="btn-group btn-group-justified" role="group" id="filterStatus">
+                              <a class="btn btn-sm btn-link active" href="#">Active</a>
+                              <a class="btn btn-sm btn-link" href="#">N/A</a>
+                              <a class="btn btn-sm btn-link" href="#">Inactive</a>
+                           </div> -->
+                           <div class="btn-group btn-group-justified" data-toggle="buttons" id="filterStatus">
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option1" autocomplete="off">Active
+                              </label>
+                              <label class="btn btn-link active">
+                                 <input type="radio" name="options" id="option2" autocomplete="off" checked>N/A
+                              </label>
+                              <label class="btn btn-link">
+                                 <input type="radio" name="options" id="option3" autocomplete="off">Inactive
+                              </label>
+                           </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <label for="filterTags" class="small text-muted text-uppercase">Tags</label>
+                           <!-- <div class="btn-group btn-group-justified" role="group" id="filterActuality">
+                              <a class="btn btn-sm btn-link" href="#">Enabled</a>
+                              <a class="btn btn-sm btn-link" href="#">Disabled</a>
+                           </div> -->
+                        </li>
+                        <!-- <ul class="with-states list-unstyled tags" id="filterTags"> -->
+                        <li>
+                           <div class="checkbox checkbox-right">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="text-overflow">
+                                    <i class="fa fa-tag text-muted-light"></i>
+                                    Simulation Simulation Simulation Simulation Simulation
+                                 </span>
+                              </label>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="checkbox checkbox-right">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="text-overflow">
+                                    <i class="fa fa-tag text-muted-light"></i>
+                                    Tag #2
+                                 </span>
+                              </label>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="checkbox checkbox-right">
+                              <label>
+                                 <input type="checkbox">
+                                 <span class="text-overflow">
+                                    <i class="fa fa-tag text-muted-light"></i>
+                                    Other tag
+                                 </span>
+                              </label>
+                           </div>
+                        </li>
+                        <!-- </ul> -->
+                        <li class="divider"></li>
+                        <li class="text-right">
+                           <div class="btn-group" role="group" id="applyFilters">
+                              <button class="btn btn-sm btn-link" type="button"><i class="fa fa-times"></i>Cancel</button>
+                              <a class="btn btn-sm btn-default" href="#"><i class="fa fa-check"></i> Apply</a>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <form class="form-inline" role="search">
+                     <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+            
+            <!-- TABLE -->
+            <table class="table table-bordered table-hover rules-list">
+               <!-- THEAD -->
+               <thead>
+                  <tr>
+                     <th></th>
+                     <th class="text-center">Status</th>
+                     <th width="20%"><div class="column-header-holder"><span>Name <a href="#" class="text-muted"><i class="mi-filter_list"></i></a></span><a href="#" class="text-muted"><i class="fa fa-sort"></i></a></div></th>
+                     <th width="42%">Trigger</th>
+                     <th width="16%">Action</th>
+                     <th><div class="column-header-holder">Created on<a href="#" class="text-muted"><i class="fa fa-sort"></i></a></div></th>
+                     <th><div class="column-header-holder">Edited on<a href="#" class="text-muted"><i class="fa fa-sort"></i></a></div></th>
+                     <th></th>
+                  </tr>
+               </thead>
+               <!-- TBODY -->
+               <tbody>
+                  <tr class="">
+                     <td>
+                        <div class="column-holder">
+                           <div class="checkbox">
+                              <label><input type="checkbox"></label>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="text-center">
+                        <div class="column-holder">
+                           <a href="#" class="status bg-active"></a>
+                           <span class="label label-default"><i class="fa fa-tag"></i>Simulation</span>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <form action="">
+                              <fieldset>
+                                 <div class="form-group mb-6">
+                                    <label for="rule_name#1" class="sr-only small text-muted text-uppercase">Rule name</label>
+                                    <div class="complex-input complex-input-lg">
+                                       <span class="input-addon">#1</span>
+                                       <input type='text' class="form-control" id="rule_name#1" value="Rule name" /> 
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="ruleDesc1" class="rule-desc small text-muted text-uppercase">Description</label>
+                                    <textarea rows="1" class="lead" id="ruleDesc1">Lorem ipsum dolor sit amet, elit tila consectetur adipisicing elit mora ipsum lorem dolor sit amet, conse ctetur adipisicing elit. Voluptatibus delectus ab ipsum.</textarea>
+                                 </div>
+                              </fieldset>
+                           </form>
+                        </div>
+                        <a href="#" class="column-more">&#x85;</a>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <div class="row hor-gut-10px">
+                              <!-- Trigger Types -->
+                              <div class="col-xs-7">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerKeywords" class="small text-muted text-uppercase">Keywords</label>
+                                          <textarea rows="1" class="form-control" id="triggerKeywords">Rule, keywords, comma, delimiter, keywords, rule, delimiter, keywords, comma, delimiter, keywords</textarea>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="triggerCategory" class="small text-muted text-uppercase">Category</label>
+                                          <select class="form-control" id="triggerCategory">
+                                                <option value="1">Category #1</option>
+                                                <option value="2">Category #2</option>
+                                                <option value="3">Category #3</option>
+                                                <option value="4">Category #4</option>
+                                          </select>
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                              <!-- Trigger Date and Time -->
+                              <div class="col-xs-5">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerStart"  placeholder="Select start date" /> 
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerEnd"  placeholder="Select end date" /> 
+                                          </div>
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 Add trigger
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <a href="#" class="column-more">&#x85;</a>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <form action="">
+                              <div class="form-group">
+                                 <label for="actionRedirect" class="small text-muted text-uppercase">Redirect</label>
+                                 <input type='text' class="form-control" id="actionRedirect" value="/screens/touch-technology" /> 
+                              </div>
+                           </form>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 Add action
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <a href="#" class="column-more">&#x85;</a>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-created-Date-3" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-created-Date-3" value="05/27/2016" disabled /> 
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="rule-created-Time-3" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-created-Time-3" value="12:00 AM" disabled /> 
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-edited-Date-3" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-edited-Date-3" value="05/27/2016" disabled /> 
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="rule-created-Time-3" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-created-Time-3" value="12:22 AM" disabled /> 
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="text-nowrap inline-icons"> 
+                        <div class="column-holder">
+                           <a class="text-muted" href="#"><i class="fa fa-pencil"></i></a>
+                           <a class="text-muted" href="#"><i class="fa fa-times"></i></a>
+                           <a href="#" class="btn btn-sm btn-default btn-save"><i class="fa fa-check-circle"></i>Save</a>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr class="inactive">
+                     <td>
+                        <div class="column-holder">
+                           <div class="checkbox">
+                              <label><input type="checkbox"></label>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="text-center">
+                        <div class="column-holder">
+                           <a href="#" class="status bg-inactive"></a>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <form action="">
+                              <fieldset>
+                                 <div class="form-group mb-6">
+                                    <label for="rule_name#2" class="sr-only small text-muted text-uppercase">Rule name</label>
+                                    <div class="complex-input complex-input-lg">
+                                       <span class="input-addon">#2</span>
+                                       <input type='text' class="form-control" id="rule_name#2" value="Rule name" /> 
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="ruleDesc1" class="rule-desc small text-muted text-uppercase">Description</label>
+                                    <textarea rows="1" class="lead" id="ruleDesc1">Lorem ipsum dolor sit amet, elit tila consectetur tila</textarea>
+                                 </div>
+                              </fieldset>
+                           </form>
+                        </div>
+                        <a href="#" class="column-more">&#x85;</a>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <div class="row hor-gut-10px">
+                              <!-- Trigger Types -->
+                              <div class="col-xs-7">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerTags1" class="small text-muted text-uppercase">Tags</label>
+                                          <input type="text" class="form-control" id="triggerTags1" aria-describedby="triggerTags1"  placeholder='Enter tags' value="tag#1, tag_long#2, tags#3, tag#4, tag_long#5, tag#6, tag#7">
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                              <!-- Trigger Date and Time -->
+                              <div class="col-xs-5">
+                                 <form action="">
+                                    <fieldset>
+                                       <div class="form-group">
+                                          <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerStart"  placeholder="Select start date" /> 
+                                          </div>
+                                       </div>
+                                       <div class="form-group">
+                                          <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                          <div class="datepicker-holder">
+                                             <input type='text' class="form-control datepicker" id="triggerEnd"  placeholder="Select end date" /> 
+                                          </div>
+                                       </div>
+                                    </fieldset>
+                                 </form>
+                              </div>
+                           </div>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 Add trigger
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <a href="#" class="column-more">&#x85;</a>
+                     </td>
+                     <td class="btn-bottom-holder">
+                        <div class="column-holder">
+                           <form action="">
+                              <div class="form-group">
+                                 <label for="actionProductList" class="small text-muted text-uppercase">Product List</label>
+                                 <textarea rows="1" class="form-control" id="actionProductList">ident#1, id_item#2, id#3, id_item#4</textarea>
+                                 <button type="button" class="btn btn-default btn-sm btn-file">
+                                    <i class="fa fa-file-text-o"></i>
+                                    Upload file
+                                 </button>
+                              </div>
+                           </form>
+                           <div class="btn-group btn-group-sm">
+                              <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-plus"></i>
+                                 Add action
+                                 <span class="caret"></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                                 <li>
+                                    <a href="#">Dropdown link</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <a href="#" class="column-more">&#x85;</a>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-created-Date-1" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-created-Date-1" value="05/27/2016" readonly /> 
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="rule-created-Time-1" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-created-Time-1" value="12:00 AM" readonly /> 
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td>
+                        <div class="column-holder">
+                           <div class="form-group">
+                              <label for="rule-edited-Date-1" class="small text-muted text-uppercase">Date</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-edited-Date-1" value="05/27/2016" readonly /> 
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <label for="rule-edited-Time-1" class="small text-muted text-uppercase">Time</label>
+                              <div class="datepicker-holder">
+                                 <input type='text' class="form-control" id="rule-edited-Time-1" value="12:22 AM" readonly /> 
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                     <td class="text-nowrap inline-icons"> 
+                        <div class="column-holder">
+                           <a class="text-muted" href="#"><i class="fa fa-pencil"></i></a>
+                           <a class="text-muted" href="#"><i class="fa fa-times"></i></a>
+                           <a href="#" class="btn btn-sm btn-default btn-save"><i class="fa fa-check-circle"></i>Save</a>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <!-- <hr /> -->
+
+            <div class="row table-footer">
+               <div class="col-sm-6">
+                  <p class="small text-nowrap"><span>10</span> of <span>22</span> rules</p>
+               </div>
+               <div class="col-sm-6 text-right">
+                  <a href="#" class="btn btn-sm btn-link text-muted"><i class="fa fa-angle-left"></i>Previous</a>
+                  <a href="#" class="btn btn-sm btn-link fa-right">Next <i class="fa fa-angle-right"></i></a>
+               </div>
+            </div>
+         </div>
+         <!-- /.MAIN -->
+      </div>
+
+      <!-- MODAL -->
+      <div id="addRule" data-show="true" class="modal fade add-rule">
+         <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="modal-header text-center">
+                  <h4 class="modal-title">Add new search rule</h4>
+                  <hr />
+               </div>
+               <div class="modal-body">
+                  <div class="add-rule-wiz">
+                     <ol class="list-inline">
+                        <li>
+                           <h4>General</h4>
+                           <div class="wiz-step">
+                              <form action="">
+                                 <fieldset>
+                                    <div class="form-group">
+                                       <label for="addRuleName" class="sr-only small text-muted text-uppercase">Rule name</label>
+                                       <div class="complex-input complex-input-lg">
+                                          <span class="input-addon text-muted">#3</span>
+                                          <input type='text' class="form-control" id="addRuleName" placeholder="Enter rule name" /> 
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="addRuleDescrition" class="sr-only small text-muted text-uppercase">Rule descrition</label>
+                                       <textarea rows="1" class="lead" id="addRuleDescrition" placeholder="Enter rule description"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="rule-1-created-date" class="small text-muted text-uppercase">Date</label>
+                                       <div class="datepicker-holder">
+                                          <input type='text' class="form-control" id="rule-1-created-date" value="05/27/2016, 12:00 AM" readonly /> 
+                                       </div>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                           </div>
+                        </li>
+                        <li>
+                           <h4>Trigger</h4>
+                           <div class="wiz-step">
+                              <form action="">
+                                 <fieldset>
+                                    <div class="form-group">
+                                       <div class="row hor-gut-10px">
+                                          <div class="col-sm-6">
+                                             <label for="triggerStart" class="small text-muted text-uppercase">Start</label>
+                                             <div class="datepicker-holder">
+                                                <input type='text' class="form-control datepicker" id="triggerStart" /> 
+                                             </div>
+                                          </div>
+                                          <div class="col-sm-6">
+                                             <label for="triggerEnd" class="small text-muted text-uppercase">End</label>
+                                             <div class="datepicker-holder">
+                                                <input type='text' class="form-control datepicker" id="triggerEnd" /> 
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="triggerKeywords" class="small text-muted text-uppercase">Keywords</label>
+                                       <textarea rows="1" class="form-control" id="triggerKeywords">Rule, keywords, comma, delimiter, keywords, rule, delimiter, keywords, comma, delimiter, keywords</textarea>
+                                    </div>
+                                    <div class="form-group">
+                                       <label for="triggerCategory" class="small text-muted text-uppercase">Category</label>
+                                       <select class="form-control" id="triggerCategory">
+                                             <option value="1">Category #1</option>
+                                             <option value="2">Category #2</option>
+                                             <option value="3">Category #3</option>
+                                             <option value="4">Category #4</option>
+                                       </select>
+                                    </div>
+                                    <div class="btn-group btn-group-sm">
+                                       <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                          <i class="fa fa-plus"></i>
+                                          Add trigger
+                                          <span class="caret"></span>
+                                       </a>
+                                       <ul class="dropdown-menu">
+                                          <li>
+                                             <a href="#">Dropdown link</a>
+                                          </li>
+                                          <li>
+                                             <a href="#">Dropdown link</a>
+                                          </li>
+                                          <li>
+                                             <a href="#">Dropdown link</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </fieldset>
+                              </form>
+                              
+                           </div>
+                        </li>
+                        <li>
+                           <h4>Action</h4>
+                           <div class="wiz-step">
+                              <form action="">
+                                 <div class="form-group">
+                                    <label for="actionProductList" class="small text-muted text-uppercase">Product List</label>
+                                    <textarea rows="1" class="form-control" id="actionProductList">ident#1, id_item#2, id#3, id_item#4</textarea>
+                                    <a href="#" class="btn btn-default btn-sm btn-file">
+                                       <i class="fa fa-file-text-o"></i>
+                                       Upload file
+                                    </a>
+                                 </div>
+                                 <div class="btn-group btn-group-sm">
+                                    <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                       <i class="fa fa-plus"></i>
+                                       Add action
+                                       <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                       <li>
+                                          <a href="#">Dropdown link</a>
+                                       </li>
+                                       <li>
+                                          <a href="#">Dropdown link</a>
+                                       </li>
+                                       <li>
+                                          <a href="#">Dropdown link</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </form>
+                           </div>
+                        </li>
+                     </ol>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <hr />
+                  <button type="button" class="btn btn-link text-muted" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i> Cancel</button>
+                  <button type="button" class="btn btn-default" aria-hidden="true"><i class="fa fa-plus"></i> Add rule</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- /.MODAL -->
+
+   </div>
+
+   <script src="scripts/vendor.js"></script>
+
+   <script src="scripts/plugins.js"></script>
+
+   <script src="scripts/main.js"></script>
+
+   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+   <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+</body>
+</html>

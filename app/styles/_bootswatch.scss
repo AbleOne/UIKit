@@ -329,12 +329,17 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     width: 100%;
     display: block;
   }
+  
+  .list-group-item.collapse-by-icon + .list-group-item-content,
+  tr.inactive {
 
-  tr.inactive .input-addon,
-  tr.inactive .form-control,
-  tr.inactive textarea {
-    box-shadow: none;
-    border-color: transparent !important;
+    .input-addon,
+    .form-control,
+    textarea,
+    span.readonly {
+      box-shadow: none;
+      border-color: transparent !important;
+    }
   }
 
   tr.inactive .rule-desc {
@@ -368,6 +373,11 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     @include box-shadow(inset 0 -1px 0 #ddd);
     font-size: 12px;
 
+    &.small {
+      margin-top: -6px;
+      font-size: 85%;
+    }
+
     &:focus {
       @include box-shadow(inset 0 -2px 0 $brand-primary);
     }
@@ -391,18 +401,23 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
   }
 
-  tr.inactive textarea[disabled],
-  tr.inactive textarea.form-control[disabled],
-  tr.inactive input.form-control[disabled]:not([id^="rule-"]),
-  tr.inactive input[type=text]:not([id^="rule-"]),
-  tr.inactive [type=text][disabled].form-control:not([id^="rule-"]),
-  tr.inactive input[type=password][disabled],
-  tr.inactive input[type=email][disabled],
-  tr.inactive input[type=number][disabled] {
-    border: none;
-    color: lighten($text-color, 8%); // inherit;
-    background: transparent;
-    cursor: auto !important;
+  .list-group-item.collapse-by-icon + .list-group-item-content,
+  tr.inactive {
+
+    textarea[disabled],
+    textarea.form-control[disabled],
+    input.form-control[disabled]:not([id^="rule-"]),
+    input[type=text]:not([id^="rule-"]),
+    [type=text][disabled].form-control:not([id^="rule-"]),
+    input[type=password][disabled],
+    input[type=email][disabled],
+    input[type=number][disabled],
+    span.readonly {
+      border: none;
+      color: lighten($text-color, 8%); // inherit;
+      background: transparent;
+      cursor: auto !important;
+    }
   }
 
   input[type=text],
