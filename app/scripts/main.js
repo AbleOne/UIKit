@@ -77,10 +77,47 @@ $(document).ready(function() {
   // DatePicker
   var now = moment().calendar();
   $('.datepicker').datetimepicker({
-    defaultDate: 'now' //,
-    // collapse: false
-    // debug: true
+    // debug: true,
+    // allowInputToggle: true,
+    // showClose: true,
+    defaultDate: 'now'
   });
+
+    // DatePicker set value to sibling inputs
+    function dpSetValues(eventData, dpInstance) {
+      dpInstance.siblings('[id$="DateVal"]').val(eventData.date.format("MM/DD/YYYY"));
+      dpInstance.siblings('[id$="TimeVal"]').val(eventData.date.format("hh:mm A"));
+    }
+
+  // rules filter in side panel
+  if ($('#rules-filters-side-panel').length) {
+    if ($('#rulesSideFilterStartDateVal, #rulesSideFilterStartTimeVal, #rulesSideFilterEndDateVal, #rulesSideFilterEndTimeVal').length) {
+      $('#rulesSideFilterStartDateVal, #rulesSideFilterStartTimeVal, #rulesSideFilterEndDateVal, #rulesSideFilterEndTimeVal').on('click', function(e) {
+        e.preventDefault();
+        var thisDatePicker = $(this).siblings('.datepicker');
+        thisDatePicker.trigger('focus');
+        thisDatePicker.on('dp.change', function(e) {
+          dpSetValues(e, $(this));
+        });
+      });
+    }
+  }
+
+  // autofocus for quick-search in rules side panel
+    $('#rules-quick-search-side-panel').on('shown.bs.collapse', function() {
+        $('#rules-list-sidebar > .collapse').collapse('hide');
+        $('[data-input="quick-search"]').focus();
+    });
+
+  // $('[data-input="quick-search"]').on('keydown', function() {
+  // });
+
+  // no 2 expanded .collapse items in .well-title
+    $('.well-title [data-toggle="collapse"]').on('click', function() {
+      if ($('.well-title ~ .well-holder').hasClass('in')) {
+        $('.well-title ~ .well-holder.in').collapse('hide');
+      }
+    });
 
   // Autosize
   autosize($('textarea'));

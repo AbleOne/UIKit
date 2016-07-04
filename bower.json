@@ -7,7 +7,8 @@
     "font-awesome": "^4.6.3",
     "eonasdan-bootstrap-datetimepicker": "^4.17.37",
     "autosize": "^3.0.15",
-    "bootstrap-tagsinput": "^0.8.0"
+    "bootstrap-tagsinput": "^0.8.0",
+    "bootstrap-quick-search": "^0.9.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -15,6 +16,12 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "bootstrap-quick-search": {
+      "main": [
+        "dist/stylesheets/bootstrap-quick-search.min.css",
+        "dist/javascripts/bootstrap-quick-search.min.js"
       ]
     }
   },

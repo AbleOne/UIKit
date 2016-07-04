@@ -68,6 +68,21 @@
     text-decoration: none;
   }
 
+  .well {
+    
+    .with-states .btn-group-justified .btn + .btn {
+      border-left-color: $well-bg;
+    }
+
+    .btn-default {
+      background-color: #e4e4e4;
+
+      &:hover {
+        background-color: darken(#e4e4e4, 5%);        
+      }
+    }
+  }
+
 
   // BS Showcase
 
@@ -195,6 +210,9 @@
       }
 
   // padding
+    .p-0 {
+      padding: 0;
+    }
     // left
       .pl-35 {
         padding-left: 35px;
@@ -286,7 +304,9 @@
     }
 
     .divider {
-      // margin: 5px 0;
+      height: 1px;
+      margin: 10px 0;
+      overflow: hidden;
       background-color: #f1f1f1;
     }
 
@@ -635,7 +655,17 @@
   }
 
 
-// (RULES) SIDEBAR
+// (RULES SIDEBAR) COLLAPSE
+  .form-action-clear {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+
+    cursor: pointer;
+    pointer-events: all;
+    display: none;
+  }
+  
   [data-toggle="collapse"] {
     // icon colors
       .fa {
@@ -676,58 +706,94 @@
     }
   }
 
+  // (RULES SIDEBAR) RULES LIST
+    // .list-group-item extend
+    .list-group-item.collapse-by-icon {
+      padding-left: 7px;
+      padding-right: 0;
+      border: none;
+      border-top: 1px solid $table-border-color;
 
-  // .list-group-item extend
-  .list-group-item.collapse-by-icon {
-    padding-left: 7px;
-    padding-right: 0;
-    border: none;
-    border-top: 1px solid $table-border-color;
+      &:first-child {
+        border-top-color: transparent;
+      }
 
-    &:first-child {
-      border-top-color: transparent;
-    }
+      .text-overflow {
+        font-size: 14px;
+      }
 
-    .text-overflow {
-      font-size: 14px;
-    }
-
-    .pull-right {
-      padding-right: 10px;
-      margin-left: 10px;
-    }
+      .pull-right {
+        padding-right: 10px;
+        margin-left: 10px;
+      }
 
 
-    // li.list-group-item[data-toggle="collapse"] {
+      // li.list-group-item[data-toggle="collapse"] {
 
-     & + .list-group-item-content {
-        display: block;
-        overflow: hidden;
-        border: none;
+       & + .list-group-item-content {
+          display: block;
+          overflow: hidden;
+          border: none;
 
-        &[aria-expanded="false"] {
-          height: 0;
-        }
+          &[aria-expanded="false"] {
+            height: 0;
+          }
 
-        > ul {
-          margin: 0 10px 5px 25px;
+          > ul {
+            margin: 0 10px 5px 25px;
 
-          li {
-            border-top: 1px dashed $table-border-color;
-            padding: 15px 0 5px;
+            li {
+              border-top: 1px dashed $table-border-color;
+              padding: 15px 0 5px;
 
-            &:first-child {
-              border-top-color: transparent;
-              padding-top: 0;
+              &:first-child {
+                border-top-color: transparent;
+                padding-top: 0;
+              }
+            }
+
+            label {
+              display: block;
+              margin-bottom: -6px;
             }
           }
+          
+        }
+      // }
+    }
 
-          label {
-            display: block;
-            margin-bottom: -6px;
+
+  // (RULES SIDEBAR) FILTERS PANEL
+    #rules-filters-side-panel {
+
+      ul.with-states {
+        margin: 0;
+        padding: 0;
+      }
+      
+      label:not(.btn) {
+        display: block;
+        margin-bottom: -4px;
+      }
+
+      .checkbox.checkbox-right label {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      // START < - > END TRIGGERS
+        .datepicker-holder {
+          
+          input:not(.datepicker) {
+            box-shadow: none !important;
+            cursor: pointer;
+          }          
+
+          input.datepicker {
+            // visibility: hidden;
+            overflow: hidden;
+            height: 0;
+            width: 100%;
           }
         }
-        
-      }
-    // }
-  }
+    }

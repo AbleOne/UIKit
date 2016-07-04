@@ -988,6 +988,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     border-radius: 0;
     @include box-shadow(none);
 
+    &-holder.collapsing {
+      width: 100%;
+    }
+
     &.well-sm {
       padding: 9px 8px;
     }
@@ -1001,16 +1005,42 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
     }
 
     .well-title {
+      margin-bottom: 3px;
+
       .btn {
         padding: 1px 3px;
+        margin-top: -4px;
+
+        i {
+          color: inherit;
+        }
+
+        .fa {
+          font-size: 12px;
+          width: 15px;
+        }
 
         &:first-child {
           margin-right: -5px;
         }
 
+        &[aria-expanded="true"] {
+          color: #000;
+          background-color: $well-bg;
+
+          i {
+            color: inherit;
+          }
+        }
+
         .fa {
           margin: 0;
         }
+      }
+
+      & ~ .well-holder .well {
+        padding: 10px;
+        margin-bottom: 0;
       }
     }
   }
